@@ -1,0 +1,126 @@
+:root {
+  --bg-color: #0a0a0c;
+  --card-bg: #111114;
+  --accent: #000000;
+  --text-dim: #666;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.tech-stack-minimal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 30px;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+}
+
+.tech-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Estilo del icono (puedes usar SVGs o Iconos de Fuente) */
+.tech-item i,
+.tech-item img {
+  font-size: 2.5rem;
+  color: var(--text-dim);
+  filter: grayscale(100%) opacity(0.6);
+  transition: all 0.3s ease;
+}
+
+/* Tooltip: El nombre que aparece al pasar el mouse */
+.tech-item::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -30px;
+  background: var(--accent);
+  color: white;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Efectos Hover */
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+.tech-item:hover i,
+.tech-item:hover img {
+  filter: grayscale(0%) opacity(1);
+  color: var(--accent); /* O el color original si usas SVGs */
+}
+
+.tech-item:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skills */
+
+.skill-card {
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 15px;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  border-color: #e94560;
+}
+
+.status-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.skill-content {
+  padding: 1.5rem;
+}
+
+.skill-title {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-description {
+  color: #aebbdb;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  height: 3.2em;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Personalización de los indicadores del carrusel de PrimeNG */
+:host ::ng-deep .p-carousel-indicators .p-link {
+  background-color: #0f3460;
+}
+
+:host ::ng-deep .p-highlight .p-link {
+  background-color: #e94560 !important;
+}

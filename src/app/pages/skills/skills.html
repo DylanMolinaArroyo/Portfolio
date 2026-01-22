@@ -1,0 +1,27 @@
+<div class="column colored_column">
+  <h2 class="responsive-title">Skills</h2>
+  <div class="tech-stack-minimal">
+    @for (item of technologies; track item.name) {
+      <div class="tech-item" [attr.data-name]="item.name">
+        <i [class]="item.icon"></i>
+      </div>
+    }
+  </div>
+  <p-carousel
+    [value]="skills"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    autoplayInterval="5000"
+  >
+    <ng-template pTemplate="item" let-skill>
+      <div class="skill-card">
+        <div class="skill-content">
+          <h3 class="skill-title">{{ skill.title }}</h3>
+          <p class="skill-description">{{ skill.description }}</p>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

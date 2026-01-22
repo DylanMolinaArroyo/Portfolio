@@ -17,30 +17,38 @@ export class Navbar {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        routerLink: ['/'],
       },
       {
         label: 'About',
         icon: 'pi pi-user',
+        routerLink: ['/about'],
+      },
+      {
+        label: 'Education',
+        icon: 'pi pi-graduation-cap',
+        routerLink: ['/education'],
       },
       {
         label: 'Experience',
         icon: 'pi pi-briefcase',
+        routerLink: ['/experience'],
       },
+
       {
         label: 'My Projects',
         icon: 'pi pi-palette',
+        routerLink: ['/projects'],
       },
       {
         label: 'Skills',
         icon: 'pi pi-code',
-      },
-      {
-        label: 'Resume',
-        icon: 'pi pi-file',
+        routerLink: ['/skills'],
       },
       {
         label: 'Contact',
         icon: 'pi pi-envelope',
+        routerLink: ['/contact'],
       },
     ];
   }
