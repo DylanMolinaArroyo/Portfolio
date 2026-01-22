@@ -1,0 +1,214 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'primeicons/primeicons.css';
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-VariableFont_wdth,wght.ttf');
+}
+
+:root {
+  --color-primary: #3b82f6;
+  --color-text: #1f2937;
+  --container-padding: 1rem;
+  --max-width-mobile: 100%;
+}
+
+* {
+  font-family: 'Roboto', 'arial', sans-serif;
+  margin: 0;
+}
+
+.align-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.align-center {
+  align-items: center;
+  text-align: center;
+}
+
+.align-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.container {
+  width: 100%;
+  background-color: brown;
+  max-width: var(--max-width-mobile);
+  padding: 0 var(--container-padding);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.responsive-title {
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.responsive-text {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+/* Grid para móvil - 1 columna */
+.responsive-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #3b82f6;
+}
+
+.avatar-image {
+  max-width: 200px;
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .row {
+    flex-direction: row; /* Tablet: fila */
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+
+  .column {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .responsive-title {
+    font-size: 1.75rem; /* 28px */
+    margin-bottom: 1rem;
+  }
+
+  .responsive-text {
+    font-size: 1rem; /* 16px */
+    max-width: 85%;
+  }
+
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .avatar-image {
+    max-width: 220px;
+  }
+}
+
+/* 1. LAPTOP PEQUEÑA (1024px - 1279px) */
+/* Laptops de 13"-15", 1366x768 o 1920x1080 */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .responsive-title {
+    font-size: 2rem; /* 32px */
+    line-height: 1.2;
+  }
+
+  .responsive-text {
+    font-size: 1rem; /* 16px */
+    max-width: 65ch;
+  }
+
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .avatar-image {
+    max-width: 250px;
+  }
+}
+
+/* 2. DESKTOP 24" (1280px - 1535px) */
+/* Monitores 24" Full HD (1920x1080) o 2K (2560x1440) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .responsive-title {
+    font-size: 2.5rem; /* 40px */
+    line-height: 1.15;
+  }
+
+  .responsive-text {
+    font-size: 1.125rem; /* 18px */
+    max-width: 70ch;
+  }
+
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .avatar-image {
+    max-width: 300px;
+  }
+}
+
+/* 3. WIDESCREEN 27"+ (1536px en adelante) */
+/* Monitores 27" 2K (2560x1440) o 4K (3840x2160) */
+@media (min-width: 1536px) {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+
+  .responsive-title {
+    font-size: 3rem; /* 48px */
+    line-height: 1.1;
+  }
+
+  .responsive-text {
+    font-size: 1.25rem; /* 20px */
+    max-width: 75ch;
+  }
+
+  .responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1rem 2rem;
+  }
+
+  .avatar-image {
+    max-width: 450px;
+  }
+}

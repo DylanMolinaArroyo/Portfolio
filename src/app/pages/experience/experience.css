@@ -1,0 +1,63 @@
+.card {
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(233, 69, 96, 0.15);
+  border-color: #e94560;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+.role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.company {
+  color: #e94560;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.year {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #aebbdb;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.description ul {
+  padding-left: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #0f3460, #16213e);
+  border: 1px solid #533483;
+  color: #aebbdb;
+}

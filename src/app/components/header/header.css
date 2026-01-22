@@ -1,0 +1,23 @@
+@layer app-styles {
+  .jumbotron {
+    border: none;
+    border-radius: 0;
+    padding: 2rem 1rem;
+    background-color: aqua;
+  }
+  .jumbotron .divider {
+    text-align: center;
+  }
+
+  .jumbotron h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.5rem;
+  }
+
+  .jumbotron h3 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    opacity: 0.9;
+  }
+}

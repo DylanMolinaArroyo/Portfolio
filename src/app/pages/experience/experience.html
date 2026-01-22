@@ -1,0 +1,30 @@
+<div class="column">
+  <h2 class="responsive-title">My Work Experience</h2>
+  <div class="responsive-grid">
+    @for (item of experiences; track item.role) {
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="role">{{ item.role }}</div>
+            <div class="company">{{ item.company }}</div>
+          </div>
+          <span class="year">{{ item.year }}</span>
+        </div>
+
+        <div class="description">
+          <ul>
+            @for (desc of item.description; track desc) {
+              <li>{{ desc }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="tags">
+          @for (tag of item.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
