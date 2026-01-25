@@ -16,25 +16,25 @@ interface Project {
 }
 
 @Component({
-  selector: 'app-portfolio',
+  selector: 'app-projects',
   imports: [CommonModule, CarouselModule, ButtonModule, TagModule],
-  templateUrl: './portfolio.html',
-  styleUrl: './portfolio.css',
+  templateUrl: './projects.html',
+  styleUrl: './projects.css',
 })
-export class Portfolio {
+export class Projects {
   projects: Project[] = [];
   responsiveOptions: any[] | undefined;
 
   ngOnInit() {
     this.projects = [
       {
-        title: 'Neural Network Visualizer',
+        title: 'Game_Hub',
         description:
-          'Herramienta interactiva para visualizar pesos y sesgos en tiempo real usando TensorFlow.js.',
-        image: 'assets/projects/nn-visualizer.jpg', // Cambia por tus rutas reales
+          'React application to explore video game data and practice core React concepts.',
+        image: 'assets/projects/nn-visualizer.jpg',
         link: 'https://demo.com',
-        code: 'https://github.com',
-        tags: ['TypeScript', 'Canvas', 'AI'],
+        code: 'https://github.com/DylanMolinaArroyo/Game_Hub.git',
+        tags: ['TypeScript', 'React', 'Vite'],
         status: 'Completed',
       },
       {

@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+import { CarouselModule } from 'primeng/carousel';
+import { CommonModule } from '@angular/common';
+import { ButtonModule } from 'primeng/button';
+import { TagModule } from 'primeng/tag';
+
 export interface ExperienceItem {
   role: string;
   company: string;
@@ -10,25 +15,16 @@ export interface ExperienceItem {
 
 @Component({
   selector: 'app-experience',
-  imports: [],
+  imports: [CarouselModule, CommonModule, ButtonModule, TagModule],
   templateUrl: './experience.html',
   styleUrl: './experience.css',
 })
 export class Experience {
   experiences: ExperienceItem[] = [];
+  responsiveOptions: any[] | undefined;
 
   ngOnInit() {
     this.experiences = [
-      {
-        role: 'Systems Architect',
-        company: 'Global Cloud Services',
-        year: '2022 - Hoy',
-        description: [
-          'Diseño de infraestructura escalable para procesamiento de Big Data.',
-          'Reducción de costos de nube en un 25% mediante Serverless.',
-        ],
-        tags: ['Azure', 'Terraform', 'C#'],
-      },
       {
         role: 'Full Stack Developer',
         company: 'Creative Agency X',
@@ -39,6 +35,12 @@ export class Experience {
         ],
         tags: ['React', 'TypeScript', 'GraphQL'],
       },
+    ];
+
+    this.responsiveOptions = [
+      { breakpoint: '1280px', numVisible: 3, numScroll: 1 },
+      { breakpoint: '1024px', numVisible: 2, numScroll: 1 },
+      { breakpoint: '768px', numVisible: 1, numScroll: 1 },
     ];
   }
 }

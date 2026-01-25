@@ -1,0 +1,38 @@
+<section id="education">
+  <div class="column colored_column">
+    <h2 class="responsive-title">Education & Certifications</h2>
+    <p class="responsive-text">
+      Some of the learning experiences that have contributed to my development.
+    </p>
+    <p-carousel
+      [value]="items"
+      [numVisible]="3"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+      autoplayInterval="5000"
+    >
+      <ng-template pTemplate="item" let-education>
+        <div class="card">
+          <div class="education-content">
+            <div class="card-header">
+              <div>
+                <div class="feat">{{ education.feat }}</div>
+                <div class="institution">{{ education.institution }}</div>
+              </div>
+              <span class="year">{{ education.year }}</span>
+            </div>
+
+            <div class="description">
+              <ul>
+                @for (desc of education.description; track desc) {
+                  <li>{{ desc }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>

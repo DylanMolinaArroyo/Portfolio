@@ -1,0 +1,75 @@
+.card {
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 15px;
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(233, 69, 96, 0.15);
+  border-color: #e94560;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+.feat {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.institution {
+  color: #e94560;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.year {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #aebbdb;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.description ul {
+  padding-left: 20px;
+}
+
+.status-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.education-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* PrimeNG Personalization*/
+
+:host ::ng-deep .p-carousel-indicators .p-link {
+  background-color: #0f3460;
+}
+
+:host ::ng-deep .p-highlight .p-link {
+  background-color: #e94560 !important;
+}

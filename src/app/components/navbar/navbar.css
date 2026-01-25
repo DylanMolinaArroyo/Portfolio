@@ -1,19 +1,236 @@
 /* navbar.component.css */
-p-menubar {
-  border: none;
-  border-radius: 0;
-  background-color: aquamarine;
-}
-p-menubar .p-menuitem-link {
-  color: white !important;
-}
-p-menubar .p-menuitem-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+:host {
+  display: block;
+  --nav-bar-min-height: 72px;
+  --nav-bar-min-height-mobile: 62px;
 }
 
-::ng-deep .p-menubar .p-menubar-root-list {
-  display: flex !important;
-  justify-content: center !important;
-  width: 100% !important;
-  margin: 0 auto !important;
+/* Navbar Base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: aquamarine;
+  top: 0;
+  min-height: var(--nav-bar-min-height);
+  width: 100%;
+  position: relative;
 }
+
+.fixed-navbar {
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-start {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo i {
+  font-size: 1.5rem;
+}
+
+/* Contenedor del menú */
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Menú principal */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Botones redes sociales */
+.sns-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sns-bar li {
+  display: flex;
+  align-items: center;
+}
+
+/* Botón hamburguesa */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  font-size: 1.5rem;
+}
+
+.hamburger-btn:focus {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+:host ::ng-deep .sns-bar .p-button {
+  height: 2.5rem !important;
+  width: 2.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* RESPONSIVE */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hamburger-btn {
+    display: block;
+  }
+
+  .nav-content {
+    position: fixed;
+    top: var(--nav-bar-min-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--nav-bar-min-height));
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+
+  /* Menú activo en móvil */
+  .nav-content.active {
+    transform: translatey(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Ajustar menú principal para móvil */
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu li:last-child {
+    border-bottom: none;
+  }
+
+  :host ::ng-deep .nav-menu .p-button {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 1rem;
+    text-align: left;
+    height: auto;
+    min-height: 3.5rem;
+  }
+
+  .sns-bar {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  .nav-content::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+
+  .nav-content.active::before {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Mobile pequeño (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    min-height: var(--nav-bar-min-height-mobile);
+  }
+
+  .logo span {
+    font-size: 1rem;
+  }
+
+  .logo i {
+    font-size: 1.25rem;
+  }
+
+  .nav-content {
+    top: 60px;
+    height: calc(100vh - var(--nav-bar-min-height-mobile));
+    padding: 1.5rem;
+  }
+
+  :host ::ng-deep .nav-menu .p-button-label {
+    font-size: 1rem;
+  }
+}
+
+/* Soporte para modo oscuro 
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background-color: var(--surface-card, #1e1e1e);
+  }
+
+  .nav-content {
+    background-color: var(--surface-card, #1e1e1e);
+  }
+}
+*/

@@ -1,0 +1,46 @@
+<section id="projects">
+  <div class="column colored_column">
+    <h2 class="responsive-title">My Projects</h2>
+    <p class="responsive-text">Here are some of the projects that I've worked on</p>
+    <p-carousel
+      [value]="projects"
+      [numVisible]="3"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+      autoplayInterval="5000"
+    >
+      <ng-template pTemplate="item" let-project>
+        <div class="project-card">
+          <div class="project-image-container">
+            <img [src]="project.image" [alt]="project.title" class="project-image" />
+            <p-tag
+              [value]="project.status"
+              [severity]="getSeverity(project.status)"
+              class="status-tag"
+            ></p-tag>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+
+            <div class="project-tags">
+              <span *ngFor="let tag of project.tags" class="tag-badge">{{ tag }}</span>
+            </div>
+
+            <div class="project-actions">
+              <p-button label="Live Demo" icon="pi pi-external-link" [link]="true"></p-button>
+              <p-button
+                icon="pi pi-github"
+                [rounded]="true"
+                [text]="true"
+                severity="secondary"
+              ></p-button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>

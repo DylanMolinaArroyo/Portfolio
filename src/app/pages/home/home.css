@@ -1,0 +1,21 @@
+.margin {
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de ubicación */
+.location-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Ícono de ubicación */
+.location-icon {
+  font-size: 1.2rem;
+}
+
+.location-link {
+  color: inherit;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}

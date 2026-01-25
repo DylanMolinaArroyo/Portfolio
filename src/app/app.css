@@ -1,0 +1,93 @@
+.container {
+  width: 100%;
+  background-color: brown;
+  max-width: var(--max-width-mobile);
+  padding: 0 var(--container-padding);
+}
+
+/* 1. LAPTOP PEQUEÑA (1024px - 1279px) */
+/* Laptops de 13"-15", 1366x768 o 1920x1080 */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .container {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+/* 2. DESKTOP 24" (1280px - 1535px) */
+/* Monitores 24" Full HD (1920x1080) o 2K (2560x1440) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
+/* 3. WIDESCREEN 27"+ (1536px en adelante) */
+/* Monitores 27" 2K (2560x1440) o 4K (3840x2160) */
+@media (min-width: 1536px) {
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+  }
+}
+
+/* Slider style */
+.slider-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los puntos horizontalmente dentro del contenedor */
+  row-gap: 1rem;
+  position: fixed;
+  top: 50%; /* Centra verticalmente */
+  right: 2rem; /* Distancia desde el borde derecho */
+  transform: translateY(-50%); /* Ajuste fino para centrado vertical */
+  z-index: 1000;
+}
+
+.slider-nav a {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.slider-nav a.active {
+  background-color: white;
+  opacity: 1;
+  transform: scale(1.3);
+}
+/* Slider style */
+
+/* Slides style */
+.slides {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .slider-nav {
+    right: 1rem; /* Menor distancia en móviles */
+    row-gap: 0.8rem; /* Espacio más compacto */
+  }
+  .slider-nav a {
+    width: 10px;
+    height: 10px;
+  }
+}

@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { Card, CardModule } from 'primeng/card';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-home',
   imports: [CardModule],
-  templateUrl: './header.html',
-  styleUrl: './header.css',
+  templateUrl: './home.html',
+  styleUrl: './home.css',
 })
-export class Header {}
+export class Home {}

@@ -1,5 +1,45 @@
-<p-menubar [model]="items">
-  <ng-template #start>
-    <p-button styleClass="p-button-text p-button-plain" />
-  </ng-template>
-</p-menubar>
+<nav class="navbar fixed-navbar">
+  <!-- Logo/Start -->
+  <div class="nav-start">
+    <div class="logo" (click)="scrollToSection('home')">
+      <i class="pi pi-code"></i>
+      <span>Portfolio</span>
+    </div>
+  </div>
+
+  <!-- Menú Hamburguesa -->
+  <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+    <i class="pi {{ menuOpen ? 'pi-times' : 'pi-bars' }}"></i>
+  </button>
+
+  <!-- Menú Central -->
+  <div class="nav-content" [class.active]="menuOpen">
+    <ul class="nav-menu">
+      @for (item of Navitems; track item) {
+        <li>
+          <p-button
+            [icon]="item.icon"
+            [label]="item.label"
+            [text]="true"
+            severity="secondary"
+            (click)="scrollToSection(item.section); closeMenu()"
+          />
+        </li>
+      }
+    </ul>
+
+    <!-- Redes Sociales (End) -->
+    <ul class="sns-bar">
+      @for (item of SnsItems; track item) {
+        <li>
+          <p-button
+            [icon]="item.icon"
+            [text]="true"
+            severity="secondary"
+            (click)="openLink(item.link)"
+          />
+        </li>
+      }
+    </ul>
+  </div>
+</nav>

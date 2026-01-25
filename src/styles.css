@@ -6,38 +6,18 @@
   src: url('./assets/fonts/Roboto-VariableFont_wdth,wght.ttf');
 }
 
-:root {
-  --color-primary: #3b82f6;
-  --color-text: #1f2937;
-  --container-padding: 1rem;
-  --max-width-mobile: 100%;
-}
-
 * {
   font-family: 'Roboto', 'arial', sans-serif;
   margin: 0;
 }
 
-.align-left {
-  align-items: flex-start;
-  text-align: left;
-}
-
-.align-center {
+section {
+  display: flex;
   align-items: center;
-  text-align: center;
-}
-
-.align-right {
-  align-items: flex-end;
-  text-align: right;
-}
-
-.container {
+  justify-content: center;
   width: 100%;
-  background-color: brown;
-  max-width: var(--max-width-mobile);
-  padding: 0 var(--container-padding);
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .row {
@@ -50,23 +30,26 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 1.5rem;
 }
 
 .colored_column {
   background-color: #3b82f6;
 }
 .responsive-title {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
   line-height: 1.4;
-  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.responsive-subtitle {
+  font-size: 1rem;
+  font-weight: normal;
   margin-bottom: 0.75rem;
 }
 
 .responsive-text {
-  font-size: 0.9375rem; /* 15px */
+  font-size: 0.9375rem;
   line-height: 1.6;
-  color: #4b5563;
   margin-bottom: 1rem;
   max-width: 100%;
 }
@@ -82,7 +65,7 @@
 }
 
 .avatar-image {
-  max-width: 200px;
+  max-width: 250px;
   width: 100%;
   border-radius: 50%;
   display: block;
@@ -90,6 +73,11 @@
 
 /* ===== TABLET (768px - 1023px) ===== */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 668px;
+    margin: 0 auto;
+  }
+
   .row {
     flex-direction: row; /* Tablet: fila */
     flex-wrap: wrap;
@@ -106,6 +94,11 @@
     margin-bottom: 1rem;
   }
 
+  .responsive-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
   .responsive-text {
     font-size: 1rem; /* 16px */
     max-width: 85%;
@@ -119,7 +112,7 @@
   }
 
   .avatar-image {
-    max-width: 220px;
+    max-width: 270px;
   }
 }
 
@@ -137,6 +130,10 @@
     line-height: 1.2;
   }
 
+  .responsive-subtitle {
+    font-size: 1.5rem;
+  }
+
   .responsive-text {
     font-size: 1rem; /* 16px */
     max-width: 65ch;
@@ -150,7 +147,7 @@
   }
 
   .avatar-image {
-    max-width: 250px;
+    max-width: 320px;
   }
 }
 
@@ -166,6 +163,10 @@
   .responsive-title {
     font-size: 2.5rem; /* 40px */
     line-height: 1.15;
+  }
+
+  .responsive-subtitle {
+    font-size: 2rem;
   }
 
   .responsive-text {
@@ -197,6 +198,10 @@
   .responsive-title {
     font-size: 3rem; /* 48px */
     line-height: 1.1;
+  }
+
+  .responsive-subtitle {
+    font-size: 2.5rem;
   }
 
   .responsive-text {

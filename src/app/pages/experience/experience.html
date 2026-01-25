@@ -1,30 +1,38 @@
-<div class="column colored_column">
-  <h2 class="responsive-title">My Work Experience</h2>
-  <div class="responsive-grid">
-    @for (item of experiences; track item.role) {
-      <div class="card">
-        <div class="card-header">
-          <div>
-            <div class="role">{{ item.role }}</div>
-            <div class="company">{{ item.company }}</div>
+<section id="experience">
+  <div class="column colored_column">
+    <h2 class="responsive-title">My Work Experience</h2>
+    <p-carousel
+      [value]="experiences"
+      [numVisible]="3"
+      [numScroll]="1"
+      [circular]="true"
+      [responsiveOptions]="responsiveOptions"
+      autoplayInterval="5000"
+    >
+      <ng-template pTemplate="item" let-experience>
+        <div class="card">
+          <div class="project-content">
+            <div class="card-header">
+              <div>
+                <div class="role">{{ experience.role }}</div>
+                <div class="company">{{ experience.company }}</div>
+              </div>
+              <span class="year">{{ experience.year }}</span>
+            </div>
+
+            <div class="description">
+              <ul>
+                @for (desc of experience.description; track desc) {
+                  <li>{{ desc }}</li>
+                }
+              </ul>
+            </div>
+            <div class="project-tags">
+              <span *ngFor="let tag of experience.tags" class="tag-badge">{{ tag }}</span>
+            </div>
           </div>
-          <span class="year">{{ item.year }}</span>
         </div>
-
-        <div class="description">
-          <ul>
-            @for (desc of item.description; track desc) {
-              <li>{{ desc }}</li>
-            }
-          </ul>
-        </div>
-
-        <div class="tags">
-          @for (tag of item.tags; track tag) {
-            <span class="tag">{{ tag }}</span>
-          }
-        </div>
-      </div>
-    }
+      </ng-template>
+    </p-carousel>
   </div>
-</div>
+</section>

@@ -1,18 +1,20 @@
 import { Component, signal, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { PrimeNG } from 'primeng/config';
 
-import { Header } from './components/header/header';
 import { Navbar } from './components/navbar/navbar';
+
+import { Home } from './pages/home/home';
 import { About } from './pages/about/about';
 import { Experience } from './pages/experience/experience';
-import { Portfolio } from './pages/portfolio/portfolio';
+import { Projects } from './pages/projects/projects';
 import { Skills } from './pages/skills/skills';
+import { Education } from './pages/education/education';
+import { Divider } from './components/divider/divider';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Navbar, About, Experience, Portfolio, Skills],
+  imports: [Home, Navbar, About, Education, Experience, Projects, Skills, Divider],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
