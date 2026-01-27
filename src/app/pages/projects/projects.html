@@ -1,7 +1,23 @@
-<section id="projects">
-  <div class="column colored_column">
-    <h2 class="responsive-title">My Projects</h2>
-    <p class="responsive-text">Here are some of the projects that I've worked on</p>
+<section id="projects" class="light-section">
+  <ul class="section-background">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="column content">
+    <div class="text-section">
+      <h2 class="responsive-title" style="color: var(--title-color-ligth)">My Projects</h2>
+      <p class="responsive-text" style="color: var(--text-color-light)">
+        Here are some of the projects that I've worked on
+      </p>
+    </div>
     <p-carousel
       [value]="projects"
       [numVisible]="3"
@@ -11,7 +27,7 @@
       autoplayInterval="5000"
     >
       <ng-template pTemplate="item" let-project>
-        <div class="project-card">
+        <div class="card">
           <div class="project-image-container">
             <img [src]="project.image" [alt]="project.title" class="project-image" />
             <p-tag

@@ -1,4 +1,5 @@
 import { Component, signal, OnInit } from '@angular/core';
+
 import { Title } from '@angular/platform-browser';
 import { PrimeNG } from 'primeng/config';
 
@@ -10,11 +11,10 @@ import { Experience } from './pages/experience/experience';
 import { Projects } from './pages/projects/projects';
 import { Skills } from './pages/skills/skills';
 import { Education } from './pages/education/education';
-import { Divider } from './components/divider/divider';
 
 @Component({
   selector: 'app-root',
-  imports: [Home, Navbar, About, Education, Experience, Projects, Skills, Divider],
+  imports: [Home, Navbar, About, Education, Experience, Projects, Skills],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

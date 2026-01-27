@@ -11,17 +11,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: aquamarine;
+  background-color: var(--background-color-dark);
   top: 0;
   min-height: var(--nav-bar-min-height);
   width: 100%;
   position: relative;
 }
 
+nav.scrolled {
+  background: var(--background-color-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
 .fixed-navbar {
   position: fixed;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-start {
@@ -38,6 +43,7 @@
   font-weight: bold;
   font-size: 1.25rem;
   transition: transform 0.3s ease;
+  color: #b06458;
 }
 
 .logo:hover {

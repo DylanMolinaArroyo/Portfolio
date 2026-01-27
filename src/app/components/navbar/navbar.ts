@@ -27,6 +27,7 @@ export class Navbar implements OnInit {
   SnsItems: SnsItem[] = [];
 
   menuOpen = false;
+  hasShadow = false;
 
   constructor(private router: Router) {}
 
@@ -142,6 +143,13 @@ export class Navbar implements OnInit {
     if (window.innerWidth > 767 && this.menuOpen) {
       this.closeMenu();
     }
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollThreshold = 50;
+
+    this.hasShadow = window.scrollY > scrollThreshold;
   }
 
   // Cerrar menú al hacer click fuera

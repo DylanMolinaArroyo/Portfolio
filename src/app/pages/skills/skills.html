@@ -1,6 +1,24 @@
-<section id="skills">
-  <div class="column colored_column">
-    <h2 class="responsive-title">Skills</h2>
+<section id="skills" class="light-section">
+  <ul class="section-background">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="column content">
+    <div class="text-section">
+      <h2 class="responsive-title" style="color: var(--title-color-ligth)">Skills</h2>
+      <p class="responsive-text" style="color: var(--text-color-light)">
+        Some of the learning experiences that have contributed to my development.
+      </p>
+    </div>
+
     <div class="tech-stack-minimal">
       @for (item of technologies; track item.name) {
         <div class="tech-item" [attr.data-name]="item.name">
@@ -17,7 +35,7 @@
       autoplayInterval="5000"
     >
       <ng-template pTemplate="item" let-skill>
-        <div class="skill-card">
+        <div class="card">
           <div class="skill-content">
             <h3 class="skill-title">{{ skill.title }}</h3>
             <p class="skill-description">{{ skill.description }}</p>

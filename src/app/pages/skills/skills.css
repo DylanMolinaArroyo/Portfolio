@@ -1,20 +1,3 @@
-:root {
-  --bg-color: #0a0a0c;
-  --card-bg: #111114;
-  --accent: #000000;
-  --text-dim: #666;
-}
-
-body {
-  background-color: var(--bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-}
-
 .tech-stack-minimal {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
@@ -33,7 +16,6 @@ body {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Estilo del icono (puedes usar SVGs o Iconos de Fuente) */
 .tech-item i,
 .tech-item img {
   font-size: 2.5rem;
@@ -42,7 +24,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Tooltip: El nombre que aparece al pasar el mouse */
 .tech-item::after {
   content: attr(data-name);
   position: absolute;
@@ -59,7 +40,6 @@ body {
   white-space: nowrap;
 }
 
-/* Efectos Hover */
 .tech-item:hover {
   transform: translateY(-5px);
 }
@@ -67,7 +47,7 @@ body {
 .tech-item:hover i,
 .tech-item:hover img {
   filter: grayscale(0%) opacity(1);
-  color: var(--accent); /* O el color original si usas SVGs */
+  color: var(--accent);
 }
 
 .tech-item:hover::after {
@@ -76,21 +56,6 @@ body {
 }
 
 /* Skills */
-
-.skill-card {
-  background: #16213e;
-  border: 1px solid #0f3460;
-  border-radius: 15px;
-  margin: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-10px);
-  border-color: #e94560;
-}
-
 .status-tag {
   position: absolute;
   top: 10px;

@@ -32,6 +32,8 @@
   left: var(--x);
   top: var(--y);
   transition: all 0.5s ease;
+
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
 }
 
 /* Animación de flotación */
