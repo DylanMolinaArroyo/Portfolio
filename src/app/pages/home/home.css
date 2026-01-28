@@ -25,6 +25,12 @@
   width: 100%;
   border-radius: 50%;
   display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.avatar-image:hover {
+  transform: scale(1.1);
+  border: 2px solid var(--title-color-dark);
 }
 
 /* ===== TABLET (768px - 1023px) ===== */

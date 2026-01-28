@@ -19,6 +19,7 @@
       </p>
     </div>
     <p-carousel
+      class="personalized-carousel"
       [value]="projects"
       [numVisible]="3"
       [numScroll]="1"
@@ -27,7 +28,7 @@
       autoplayInterval="5000"
     >
       <ng-template pTemplate="item" let-project>
-        <div class="card">
+        <div class="card light-card">
           <div class="project-image-container">
             <img [src]="project.image" [alt]="project.title" class="project-image" />
             <p-tag
@@ -37,12 +38,12 @@
             ></p-tag>
           </div>
 
-          <div class="project-content">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p class="project-description">{{ project.description }}</p>
+          <div class="card-content">
+            <h3 class="card-title">{{ project.title }}</h3>
+            <p class="card-text">{{ project.description }}</p>
 
-            <div class="project-tags">
-              <span *ngFor="let tag of project.tags" class="tag-badge">{{ tag }}</span>
+            <div class="tags">
+              <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span>
             </div>
 
             <div class="project-actions">

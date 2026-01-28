@@ -24,7 +24,7 @@ export class App implements OnInit {
     private primeng: PrimeNG,
     private titleService: Title,
   ) {
-    this.titleService.setTitle('Dylan MA - Portfolio');
+    this.titleService.setTitle('Portfolio - Dylan MA');
   }
 
   ngOnInit() {

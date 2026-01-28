@@ -10,11 +10,6 @@ export interface Navitem {
   section: string;
 }
 
-export interface SnsItem {
-  icon: string;
-  link: string;
-}
-
 @Component({
   selector: 'app-navbar',
   imports: [ButtonModule, ToggleSwitchModule],
@@ -24,7 +19,6 @@ export interface SnsItem {
 })
 export class Navbar implements OnInit {
   Navitems: Navitem[] = [];
-  SnsItems: SnsItem[] = [];
 
   menuOpen = false;
   hasShadow = false;
@@ -64,21 +58,6 @@ export class Navbar implements OnInit {
         label: 'Skills',
         icon: 'pi pi-code',
         section: 'skills',
-      },
-    ];
-
-    this.SnsItems = [
-      {
-        icon: 'pi pi-github',
-        link: 'https://github.com',
-      },
-      {
-        icon: 'pi pi-linkedin',
-        link: 'https://linkedin.com',
-      },
-      {
-        icon: 'pi pi-envelope',
-        link: 'mailto:email@example.com',
       },
     ];
   }

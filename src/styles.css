@@ -29,6 +29,7 @@
   --animated-cube-color-dark: #ffffff1a;
   --animated-cube-color-light: #0000001a;
 }
+
 /* LAYOUT */
 
 section {
@@ -38,7 +39,6 @@ section {
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -88,7 +88,6 @@ section {
 /* CARD ELEMENTS */
 
 .card {
-  background: var(--card-background-dark);
   border: 0;
   border-radius: 15px;
   margin: 10px;
@@ -96,9 +95,85 @@ section {
   transition: transform 0.3s ease;
 }
 
+.card-content {
+  padding: 1.5rem;
+}
+
 .card:hover {
   transform: translateY(-5px);
-  border: 1px solid #0f3460;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-year {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.dark-card {
+  background-color: var(--card-background-dark);
+}
+
+.dark-card .card-title {
+  color: var(--title-color-dark);
+}
+
+.dark-card .card-subtitle {
+  color: var(--title-color-complementary-dark);
+}
+
+.dark-card .card-text {
+  color: var(--text-color-dark);
+}
+
+.dark-card .card-year {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color-dark);
+}
+
+.dark-card:hover {
+  border: 1px solid;
+  border-color: var(--title-color-dark);
+}
+
+.light-card {
+  background-color: var(--card-background-ligth);
+}
+
+.light-card .card-title {
+  color: var(--title-color-ligth);
+}
+
+.light-card .card-subtitle {
+  color: var(--title-color-complementary-ligth);
+}
+
+.light-card .card-text {
+  color: var(--text-color-light);
+}
+
+.light-card .card-year {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color-light);
+}
+
+.light-card:hover {
+  border: 1px solid;
   border-color: var(--title-color-ligth);
 }
 
@@ -107,6 +182,21 @@ section {
   justify-content: space-between;
   align-items: start;
   margin-bottom: 15px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #0f3460, #16213e);
+  border: 1px solid #533483;
+  color: #aebbdb;
 }
 
 /* CARD ELEMENTS */

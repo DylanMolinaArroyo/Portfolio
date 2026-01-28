@@ -1,4 +1,4 @@
-<nav class="navbar fixed-navbar" [class.scrolled]="hasShadow">
+<nav class="navbar" [class.scrolled]="hasShadow">
   <!-- Logo/Start -->
   <div class="nav-start">
     <div class="logo" (click)="scrollToSection('home')">
@@ -11,9 +11,8 @@
   <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Toggle menu">
     <i class="pi {{ menuOpen ? 'pi-times' : 'pi-bars' }}"></i>
   </button>
-
-  <!-- Menú Central -->
   <div class="nav-content" [class.active]="menuOpen">
+    <!-- Menú Central -->
     <ul class="nav-menu">
       @for (item of Navitems; track item) {
         <li>
@@ -30,16 +29,27 @@
 
     <!-- Redes Sociales (End) -->
     <ul class="sns-bar">
-      @for (item of SnsItems; track item) {
-        <li>
-          <p-button
-            [icon]="item.icon"
-            [text]="true"
-            severity="secondary"
-            (click)="openLink(item.link)"
-          />
-        </li>
-      }
+      <p-button
+        icon="pi pi-github"
+        class="btn-github"
+        [text]="true"
+        severity="secondary"
+        (click)="openLink('https://github.com/DylanMolinaArroyo')"
+      />
+      <p-button
+        icon="pi pi-linkedin"
+        class="btn-linkedin"
+        [text]="true"
+        severity="secondary"
+        (click)="openLink('https://linkedin.com/in/dylan-molina-arroyo-457360306')"
+      />
+      <p-button
+        icon="pi pi-envelope"
+        class="btn-email"
+        [text]="true"
+        severity="secondary"
+        (click)="openLink('mailto:molina_dylan@outlook.com')"
+      />
     </ul>
   </div>
 </nav>

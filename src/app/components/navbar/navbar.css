@@ -11,11 +11,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: var(--background-color-dark);
   top: 0;
   min-height: var(--nav-bar-min-height);
   width: 100%;
-  position: relative;
+  position: fixed;
+  z-index: 1000;
 }
 
 nav.scrolled {
@@ -24,9 +24,10 @@ nav.scrolled {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.fixed-navbar {
-  position: fixed;
-  z-index: 1000;
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-start {
@@ -54,14 +55,6 @@ nav.scrolled {
   font-size: 1.5rem;
 }
 
-/* Contenedor del menú */
-.nav-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* Menú principal */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -96,14 +89,9 @@ nav.scrolled {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem;
   z-index: 1001;
   font-size: 1.5rem;
-}
-
-.hamburger-btn:focus {
-  outline: 2px solid;
-  outline-offset: 2px;
 }
 
 :host ::ng-deep .sns-bar .p-button {
@@ -112,6 +100,33 @@ nav.scrolled {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+/* LinkedIn - Azul */
+:host ::ng-deep .btn-linkedin .p-button {
+  background: #0077b5 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* GitHub - Negro/Gris oscuro */
+:host ::ng-deep .btn-github .p-button {
+  background: #24292e !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Instagram - Degradado o Rosa */
+:host ::ng-deep .btn-email .p-button {
+  background: #b30000 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* Efecto Hover para todos */
+:host ::ng-deep .sns-bar .p-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
 }
 
 /* RESPONSIVE */

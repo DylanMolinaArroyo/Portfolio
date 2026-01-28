@@ -1,29 +1,4 @@
-.feat {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 5px;
-}
-.institution {
-  color: #e94560;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-.year {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  color: #ccc;
-}
-
-.description {
-  font-size: 0.9rem;
-  color: #aebbdb;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-.description ul {
+.card-text ul {
   padding-left: 20px;
 }
 
@@ -33,22 +8,15 @@
   right: 10px;
 }
 
-.education-content {
-  padding: 1.5rem;
+/* CAROUSEL ELEMENTS*/
+
+:host ::ng-deep .personalized-carousel .p-carousel-indicator .p-carousel-indicator-button {
+  background: var(--text-color-dark) !important;
+  transition: background 0.3s ease;
 }
 
-.project-title {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+:host ::ng-deep .personalized-carousel .p-carousel-indicator-active .p-carousel-indicator-button {
+  background: var(--title-color-complementary-dark) !important;
 }
 
-/* PrimeNG Personalization*/
-
-:host ::ng-deep .p-carousel-indicators .p-link {
-  background-color: #0f3460;
-}
-
-:host ::ng-deep .p-highlight .p-link {
-  background-color: #e94560 !important;
-}
+/* CAROUSEL ELEMENTS*/

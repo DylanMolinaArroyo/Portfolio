@@ -19,6 +19,7 @@
       </p>
     </div>
     <p-carousel
+      class="personalized-carousel"
       [value]="experiences"
       [numVisible]="3"
       [numScroll]="1"
@@ -27,25 +28,25 @@
       autoplayInterval="5000"
     >
       <ng-template pTemplate="item" let-experience>
-        <div class="card">
-          <div class="project-content">
+        <div class="card dark-card">
+          <div class="card-content">
             <div class="card-header">
               <div>
-                <div class="role">{{ experience.role }}</div>
-                <div class="company">{{ experience.company }}</div>
+                <div class="card-title">{{ experience.role }}</div>
+                <div class="card-subtitle">{{ experience.company }}</div>
               </div>
-              <span class="year">{{ experience.year }}</span>
+              <span class="card-year">{{ experience.year }}</span>
             </div>
 
-            <div class="description">
+            <div class="card-text">
               <ul>
                 @for (desc of experience.description; track desc) {
                   <li>{{ desc }}</li>
                 }
               </ul>
             </div>
-            <div class="project-tags">
-              <span *ngFor="let tag of experience.tags" class="tag-badge">{{ tag }}</span>
+            <div class="tags">
+              <span *ngFor="let tag of experience.tags" class="tag">{{ tag }}</span>
             </div>
           </div>
         </div>

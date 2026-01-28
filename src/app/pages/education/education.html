@@ -21,6 +21,7 @@
       </p>
     </div>
     <p-carousel
+      class="personalized-carousel"
       [value]="items"
       [numVisible]="3"
       [numScroll]="1"
@@ -29,17 +30,17 @@
       autoplayInterval="5000"
     >
       <ng-template pTemplate="item" let-education>
-        <div class="card">
-          <div class="education-content">
+        <div class="card dark-card">
+          <div class="card-content">
             <div class="card-header">
               <div>
-                <div class="feat">{{ education.feat }}</div>
-                <div class="institution">{{ education.institution }}</div>
+                <div class="card-title">{{ education.feat }}</div>
+                <div class="card-subtitle">{{ education.institution }}</div>
               </div>
-              <span class="year">{{ education.year }}</span>
+              <span class="card-year">{{ education.year }}</span>
             </div>
 
-            <div class="description">
+            <div class="card-text">
               <ul>
                 @for (desc of education.description; track desc) {
                   <li>{{ desc }}</li>

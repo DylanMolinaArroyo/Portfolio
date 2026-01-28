@@ -1,102 +1,5 @@
-.role {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 5px;
-}
-.company {
-  color: var(--title-color-complementary-dark);
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-.year {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  color: #ccc;
-}
-
-.description {
-  font-size: 0.9rem;
-  color: #aebbdb;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-.description ul {
+.card-text ul {
   padding-left: 20px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.tag {
-  font-size: 0.75rem;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: linear-gradient(45deg, #0f3460, #16213e);
-  border: 1px solid #533483;
-  color: #aebbdb;
-}
-
-.project-image-container {
-  position: relative;
-  height: 200px;
-}
-
-.project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.status-tag {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.project-content {
-  padding: 1.5rem;
-}
-
-.project-title {
-  color: #fff;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-description {
-  color: #aebbdb;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  height: 3.2em; /* Limita a 2-3 líneas */
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 1.5rem;
-}
-
-.tag-badge {
-  background: #0f3460;
-  color: #e94560;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  border: 1px solid rgba(233, 69, 96, 0.3);
-}
-
-.project-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 /* Personalización de los indicadores del carrusel de PrimeNG */
@@ -107,3 +10,16 @@
 :host ::ng-deep .p-highlight .p-link {
   background-color: #e94560 !important;
 }
+
+/* CAROUSEL ELEMENTS*/
+
+:host ::ng-deep .personalized-carousel .p-carousel-indicator .p-carousel-indicator-button {
+  background: var(--text-color-dark) !important;
+  transition: background 0.3s ease;
+}
+
+:host ::ng-deep .personalized-carousel .p-carousel-indicator-active .p-carousel-indicator-button {
+  background: var(--title-color-complementary-dark) !important;
+}
+
+/* CAROUSEL ELEMENTS*/
