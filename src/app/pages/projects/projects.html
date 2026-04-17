@@ -1,20 +1,8 @@
 <section id="projects" class="light-section">
-  <ul class="section-background">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
   <div class="column content">
     <div class="text-section">
-      <h2 class="responsive-title" style="color: var(--title-color-ligth)">My Projects</h2>
-      <p class="responsive-text" style="color: var(--text-color-light)">
+      <h2 class="responsive-title section-title-light">My Projects</h2>
+      <p class="responsive-text section-text-light">
         Here are some of the projects that I've worked on
       </p>
     </div>
@@ -43,17 +31,19 @@
             <p class="card-text">{{ project.description }}</p>
 
             <div class="tags">
-              <span *ngFor="let tag of project.tags" class="tag">{{ tag }}</span>
+              @for (tag of project.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
             </div>
 
             <div class="project-actions">
-              <p-button label="Live Demo" icon="pi pi-external-link" [link]="true"></p-button>
-              <p-button
-                icon="pi pi-github"
-                [rounded]="true"
-                [text]="true"
-                severity="secondary"
-              ></p-button>
+              <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="btn-action btn-demo">
+                <img src="assets/icons/ui/external-link.svg" class="ui-icon" alt="">
+                Live Demo
+              </a>
+              <a [href]="project.code" target="_blank" rel="noopener noreferrer" class="btn-action btn-code" aria-label="View code">
+                <img src="assets/icons/ui/github.svg" class="ui-icon" alt="">
+              </a>
             </div>
           </div>
         </div>

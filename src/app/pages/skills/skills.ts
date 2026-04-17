@@ -1,80 +1,42 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { CommonModule } from '@angular/common';
+import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
 
 export interface TechnologyItem {
   icon: string;
   name: string;
 }
 
-interface Skill {
+export interface Skill {
   title: string;
   description: string;
 }
 
 @Component({
   selector: 'app-skills',
-  imports: [CommonModule, CarouselModule],
+  imports: [CarouselModule],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
-export class Skills {
-  responsiveOptions: any[] | undefined;
-
+export class Skills implements OnInit {
+  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
   technologies: TechnologyItem[] = [];
   skills: Skill[] = [];
 
   ngOnInit() {
     this.technologies = [
-      {
-        icon: '../assets/icons/postgresql.svg',
-        name: 'Postgresql',
-      },
-      {
-        icon: '../assets/icons/github.svg',
-        name: 'Github',
-      },
-      {
-        icon: '../assets/icons/mongodb.svg',
-        name: 'Mongodb',
-      },
-      {
-        icon: '../assets/icons/supabase.svg',
-        name: 'Supabase',
-      },
-      {
-        icon: '../assets/icons/go.svg',
-        name: 'Go',
-      },
-      {
-        icon: '../assets/icons/typescript.svg',
-        name: 'Typescript',
-      },
-      {
-        icon: '../assets/icons/firebase.svg',
-        name: 'Firebase',
-      },
-      {
-        icon: '../assets/icons/python.svg',
-        name: 'Python',
-      },
-      {
-        icon: '../assets/icons/nodejs.svg',
-        name: 'Nodejs',
-      },
-      {
-        icon: '../assets/icons/java.svg',
-        name: 'Java',
-      },
-      {
-        icon: '../assets/icons/angular.svg',
-        name: 'Angular',
-      },
-      {
-        icon: '../assets/icons/react.svg',
-        name: 'React',
-      },
+      { icon: '../assets/icons/skills/postgresql.svg', name: 'Postgresql' },
+      { icon: '../assets/icons/skills/github.svg', name: 'Github' },
+      { icon: '../assets/icons/skills/mongodb.svg', name: 'Mongodb' },
+      { icon: '../assets/icons/skills/supabase.svg', name: 'Supabase' },
+      { icon: '../assets/icons/skills/go.svg', name: 'Go' },
+      { icon: '../assets/icons/skills/typescript.svg', name: 'Typescript' },
+      { icon: '../assets/icons/skills/firebase.svg', name: 'Firebase' },
+      { icon: '../assets/icons/skills/python.svg', name: 'Python' },
+      { icon: '../assets/icons/skills/nodejs.svg', name: 'Nodejs' },
+      { icon: '../assets/icons/skills/java.svg', name: 'Java' },
+      { icon: '../assets/icons/skills/angular.svg', name: 'Angular' },
+      { icon: '../assets/icons/skills/react.svg', name: 'React' },
     ];
 
     this.skills = [
@@ -108,12 +70,6 @@ export class Skills {
         description:
           'I analyzed project requirements from multiple perspectives to identify potential risks early and implement proactive improvements to the development process.',
       },
-    ];
-
-    this.responsiveOptions = [
-      { breakpoint: '1199px', numVisible: 3, numScroll: 1 },
-      { breakpoint: '991px', numVisible: 2, numScroll: 1 },
-      { breakpoint: '767px', numVisible: 1, numScroll: 1 },
     ];
   }
 }

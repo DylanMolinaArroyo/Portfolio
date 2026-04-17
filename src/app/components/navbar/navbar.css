@@ -28,6 +28,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex: 1;
 }
 
 .nav-start {
@@ -61,6 +62,8 @@ nav.scrolled {
   margin: 0;
   padding: 0;
   gap: 1rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-menu li {
@@ -68,7 +71,7 @@ nav.scrolled {
   align-items: center;
 }
 
-/* Botones redes sociales */
+/* Social link buttons */
 .sns-bar {
   display: flex;
   align-items: center;
@@ -83,7 +86,7 @@ nav.scrolled {
   align-items: center;
 }
 
-/* Botón hamburguesa */
+/* Hamburger button */
 .hamburger-btn {
   display: none;
   background: none;
@@ -92,41 +95,6 @@ nav.scrolled {
   padding: 0.5rem 0.5rem;
   z-index: 1001;
   font-size: 1.5rem;
-}
-
-:host ::ng-deep .sns-bar .p-button {
-  height: 2.5rem !important;
-  width: 2.5rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* LinkedIn - Azul */
-:host ::ng-deep .btn-linkedin .p-button {
-  background: #0077b5 !important;
-  color: white !important;
-  border: none !important;
-}
-
-/* GitHub - Negro/Gris oscuro */
-:host ::ng-deep .btn-github .p-button {
-  background: #24292e !important;
-  color: white !important;
-  border: none !important;
-}
-
-/* Instagram - Degradado o Rosa */
-:host ::ng-deep .btn-email .p-button {
-  background: #b30000 !important;
-  color: white !important;
-  border: none !important;
-}
-
-/* Efecto Hover para todos */
-:host ::ng-deep .sns-bar .p-button:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.2);
 }
 
 /* RESPONSIVE */
@@ -159,14 +127,13 @@ nav.scrolled {
     overflow-y: auto;
   }
 
-  /* Menú activo en móvil */
+  /* Active mobile menu */
   .nav-content.active {
     transform: translatey(0);
     opacity: 1;
     visibility: visible;
   }
 
-  /* Ajustar menú principal para móvil */
   .nav-menu {
     flex-direction: column;
     width: 100%;
@@ -179,15 +146,6 @@ nav.scrolled {
 
   .nav-menu li:last-child {
     border-bottom: none;
-  }
-
-  :host ::ng-deep .nav-menu .p-button {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 1rem;
-    text-align: left;
-    height: auto;
-    min-height: 3.5rem;
   }
 
   .sns-bar {
@@ -219,7 +177,7 @@ nav.scrolled {
   }
 }
 
-/* Mobile pequeño (max-width: 480px) */
+/* Mobile small (max-width: 480px) */
 @media (max-width: 480px) {
   .navbar {
     min-height: var(--nav-bar-min-height-mobile);
@@ -238,20 +196,60 @@ nav.scrolled {
     height: calc(100vh - var(--nav-bar-min-height-mobile));
     padding: 1.5rem;
   }
-
-  :host ::ng-deep .nav-menu .p-button-label {
-    font-size: 1rem;
-  }
 }
 
-/* Soporte para modo oscuro 
-@media (prefers-color-scheme: dark) {
-  .navbar {
-    background-color: var(--surface-card, #1e1e1e);
-  }
-
-  .nav-content {
-    background-color: var(--surface-card, #1e1e1e);
-  }
+/* Icons */
+.ui-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: block;
+  filter: brightness(0) invert(1);
 }
-*/
+
+.logo-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0) saturate(100%) invert(42%) sepia(50%) saturate(400%) hue-rotate(330deg);
+}
+
+/* Nav item buttons */
+.btn-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: var(--text-color-dark);
+  transition: background 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-nav:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Social buttons */
+.btn-sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-sns:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
+}
+
+.btn-github  { background: #24292e; }
+.btn-linkedin { background: #0077b5; }
+.btn-email   { background: #b30000; }

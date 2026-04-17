@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { CommonModule } from '@angular/common';
-import { ButtonModule } from 'primeng/button';
-import { TagModule } from 'primeng/tag';
+import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
 
 export interface EducationItem {
   feat: string;
@@ -13,13 +11,13 @@ export interface EducationItem {
 
 @Component({
   selector: 'app-education',
-  imports: [CarouselModule, CommonModule, ButtonModule, TagModule],
+  imports: [CarouselModule],
   templateUrl: './education.html',
   styleUrl: './education.css',
 })
-export class Education {
+export class Education implements OnInit {
   items: EducationItem[] = [];
-  responsiveOptions: any[] | undefined;
+  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
 
   ngOnInit() {
     this.items = [
@@ -37,7 +35,6 @@ export class Education {
           'Network documentation and diagram creation',
         ],
       },
-
       {
         feat: 'Computer Engineering',
         institution: 'Tecnológico de Costa Rica',
@@ -54,12 +51,6 @@ export class Education {
           'Research and implementation of emerging technologies',
         ],
       },
-    ];
-
-    this.responsiveOptions = [
-      { breakpoint: '1280px', numVisible: 3, numScroll: 1 },
-      { breakpoint: '1024px', numVisible: 2, numScroll: 1 },
-      { breakpoint: '768px', numVisible: 1, numScroll: 1 },
     ];
   }
 }

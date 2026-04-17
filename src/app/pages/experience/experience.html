@@ -1,20 +1,8 @@
 <section id="experience" class="dark-section">
-  <ul class="section-background">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
   <div class="column content">
     <div class="text-section">
-      <h2 class="responsive-title" style="color: var(--title-color-dark)">My Work Experience</h2>
-      <p class="responsive-text" style="color: var(--text-color-dark)">
+      <h2 class="responsive-title section-title-dark">My Work Experience</h2>
+      <p class="responsive-text section-text-dark">
         Some of the learning experiences that have contributed to my development.
       </p>
     </div>
@@ -46,7 +34,9 @@
               </ul>
             </div>
             <div class="tags">
-              <span *ngFor="let tag of experience.tags" class="tag">{{ tag }}</span>
+              @for (tag of experience.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
             </div>
           </div>
         </div>

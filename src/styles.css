@@ -1,5 +1,3 @@
-@import 'primeicons/primeicons.css';
-
 @font-face {
   font-family: 'Roboto';
   src: url('./assets/fonts/Roboto-VariableFont_wdth,wght.ttf');
@@ -12,19 +10,19 @@
 
 :root {
   --background-color-dark: #1b1b1e;
-  --background-color-light: #c6cad4;
+  --background-color-light: #dde1e8;
 
   --text-color-dark: #a9bcd0;
   --text-color-light: #373f51;
 
   --title-color-dark: #58a4b0;
-  --title-color-ligth: #4c95a0;
+  --title-color-light: #58a4b0;
 
   --title-color-complementary-dark: #b06458;
-  --title-color-complementary-ligth: #a0574c;
+  --title-color-complementary-light: #b06458;
 
-  --card-background-dark: #ffffff1a;
-  --card-background-ligth: #0000001a;
+  --card-background-dark: #2a2a2e;
+  --card-background-light: #eef0f5;
 
   --animated-cube-color-dark: #ffffff1a;
   --animated-cube-color-light: #0000001a;
@@ -152,15 +150,15 @@ section {
 }
 
 .light-card {
-  background-color: var(--card-background-ligth);
+  background-color: var(--card-background-light);
 }
 
 .light-card .card-title {
-  color: var(--title-color-ligth);
+  color: var(--title-color-light);
 }
 
 .light-card .card-subtitle {
-  color: var(--title-color-complementary-ligth);
+  color: var(--title-color-complementary-light);
 }
 
 .light-card .card-text {
@@ -174,7 +172,7 @@ section {
 
 .light-card:hover {
   border: 1px solid;
-  border-color: var(--title-color-ligth);
+  border-color: var(--title-color-light);
 }
 
 .card-header {
@@ -194,9 +192,9 @@ section {
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 20px;
-  background: linear-gradient(45deg, #0f3460, #16213e);
-  border: 1px solid #533483;
-  color: #aebbdb;
+  background: rgba(88, 164, 176, 0.15);
+  border: 1px solid rgba(88, 164, 176, 0.6);
+  color: #58a4b0;
 }
 
 /* CARD ELEMENTS */
@@ -317,3 +315,27 @@ section {
     padding: 1rem 2rem;
   }
 }
+
+/* SECTION COLOR UTILITIES */
+/* Used instead of inline styles to color headings/text based on dark/light section context */
+
+.section-title-dark {
+  color: var(--title-color-dark);
+}
+
+.section-title-light {
+  color: var(--title-color-light);
+}
+
+.section-text-dark {
+  color: var(--text-color-dark);
+}
+
+.section-text-light {
+  color: var(--text-color-light);
+}
+
+.section-subtitle-dark {
+  color: var(--text-color-dark);
+}
+/* SECTION COLOR UTILITIES */

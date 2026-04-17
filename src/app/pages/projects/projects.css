@@ -21,15 +21,56 @@
   align-items: center;
 }
 
-/* CAROUSEL ELEMENTS*/
-
-:host ::ng-deep .personalized-carousel .p-carousel-indicator .p-carousel-indicator-button {
-  background: var(--text-color-light) !important;
-  transition: background 0.3s ease;
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--title-color-light);
+  font-size: 0.85rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-:host ::ng-deep .personalized-carousel .p-carousel-indicator-active .p-carousel-indicator-button {
-  background: var(--title-color-complementary-ligth) !important;
+.btn-demo {
+  color: var(--title-color-light);
+  background: transparent;
 }
 
-/* CAROUSEL ELEMENTS*/
+.btn-demo:hover {
+  background: var(--title-color-light);
+  color: white;
+}
+
+.btn-demo .ui-icon {
+  filter: none;
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.btn-demo:hover .ui-icon {
+  filter: brightness(0) invert(1);
+}
+
+.btn-code {
+  color: var(--text-color-light);
+  background: transparent;
+  border-color: var(--text-color-light);
+  padding: 0.4rem;
+}
+
+.btn-code:hover {
+  background: var(--text-color-light);
+}
+
+.btn-code .ui-icon {
+  filter: none;
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-code:hover .ui-icon {
+  filter: brightness(0) invert(1);
+}

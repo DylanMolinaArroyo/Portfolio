@@ -1,55 +1,45 @@
 <nav class="navbar" [class.scrolled]="hasShadow">
-  <!-- Logo/Start -->
+  <!-- Logo -->
   <div class="nav-start">
     <div class="logo" (click)="scrollToSection('home')">
-      <i class="pi pi-code"></i>
+      <img src="assets/icons/ui/code.svg" class="ui-icon logo-icon" alt="">
       <span>Portfolio</span>
     </div>
   </div>
 
-  <!-- Menú Hamburguesa -->
+  <!-- Hamburger -->
   <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Toggle menu">
-    <i class="pi {{ menuOpen ? 'pi-times' : 'pi-bars' }}"></i>
+    @if (menuOpen) {
+      <img src="assets/icons/ui/x.svg" class="ui-icon" alt="Close menu">
+    } @else {
+      <img src="assets/icons/ui/menu.svg" class="ui-icon" alt="Open menu">
+    }
   </button>
+
   <div class="nav-content" [class.active]="menuOpen">
-    <!-- Menú Central -->
+    <!-- Nav items -->
     <ul class="nav-menu">
-      @for (item of Navitems; track item) {
+      @for (item of navItems; track item) {
         <li>
-          <p-button
-            [icon]="item.icon"
-            [label]="item.label"
-            [text]="true"
-            severity="secondary"
-            (click)="scrollToSection(item.section); closeMenu()"
-          />
+          <button class="btn-nav" (click)="scrollToSection(item.section); closeMenu()">
+            <img [src]="item.icon" class="ui-icon" alt="">
+            <span>{{ item.label }}</span>
+          </button>
         </li>
       }
     </ul>
 
-    <!-- Redes Sociales (End) -->
+    <!-- Social links -->
     <ul class="sns-bar">
-      <p-button
-        icon="pi pi-github"
-        class="btn-github"
-        [text]="true"
-        severity="secondary"
-        (click)="openLink('https://github.com/DylanMolinaArroyo')"
-      />
-      <p-button
-        icon="pi pi-linkedin"
-        class="btn-linkedin"
-        [text]="true"
-        severity="secondary"
-        (click)="openLink('https://linkedin.com/in/dylan-molina-arroyo-457360306')"
-      />
-      <p-button
-        icon="pi pi-envelope"
-        class="btn-email"
-        [text]="true"
-        severity="secondary"
-        (click)="openLink('mailto:molina_dylan@outlook.com')"
-      />
+      <button class="btn-sns btn-github" (click)="openLink('https://github.com/DylanMolinaArroyo')" aria-label="GitHub">
+        <img src="assets/icons/ui/github.svg" class="ui-icon" alt="">
+      </button>
+      <button class="btn-sns btn-linkedin" (click)="openLink('https://linkedin.com/in/dylan-molina-arroyo-457360306')" aria-label="LinkedIn">
+        <img src="assets/icons/ui/linkedin.svg" class="ui-icon" alt="">
+      </button>
+      <button class="btn-sns btn-email" (click)="openLink('mailto:molina_dylan@outlook.com')" aria-label="Email">
+        <img src="assets/icons/ui/mail.svg" class="ui-icon" alt="">
+      </button>
     </ul>
   </div>
 </nav>

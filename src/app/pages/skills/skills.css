@@ -55,18 +55,3 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Skills */
-
-/* CAROUSEL ELEMENTS*/
-
-:host ::ng-deep .personalized-carousel .p-carousel-indicator .p-carousel-indicator-button {
-  background: var(--text-color-light) !important;
-  transition: background 0.3s ease;
-}
-
-:host ::ng-deep .personalized-carousel .p-carousel-indicator-active .p-carousel-indicator-button {
-  background: var(--title-color-complementary-ligth) !important;
-}
-
-/* CAROUSEL ELEMENTS*/

@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { CommonModule } from '@angular/common';
-import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
 
-interface Project {
+export interface Project {
   title: string;
   description: string;
   image: string;
@@ -17,13 +15,13 @@ interface Project {
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, CarouselModule, ButtonModule, TagModule],
+  imports: [CarouselModule, TagModule],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
-export class Projects {
+export class Projects implements OnInit {
   projects: Project[] = [];
-  responsiveOptions: any[] | undefined;
+  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
 
   ngOnInit() {
     this.projects = [
@@ -55,12 +53,6 @@ export class Projects {
         tags: ['Python', 'Docker'],
         status: 'Completed',
       },
-    ];
-
-    this.responsiveOptions = [
-      { breakpoint: '1199px', numVisible: 3, numScroll: 1 },
-      { breakpoint: '991px', numVisible: 2, numScroll: 1 },
-      { breakpoint: '767px', numVisible: 1, numScroll: 1 },
     ];
   }
 

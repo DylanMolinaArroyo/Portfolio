@@ -1,10 +1,8 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { ButtonModule } from 'primeng/button';
-import { ToggleSwitchModule } from 'primeng/toggleswitch';
 
-export interface Navitem {
+export interface NavItem {
   label: string;
   icon: string;
   section: string;
@@ -12,14 +10,12 @@ export interface Navitem {
 
 @Component({
   selector: 'app-navbar',
-  imports: [ButtonModule, ToggleSwitchModule],
+  imports: [],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Navbar implements OnInit {
-  Navitems: Navitem[] = [];
-
+  navItems: NavItem[] = [];
   menuOpen = false;
   hasShadow = false;
 
@@ -28,47 +24,19 @@ export class Navbar implements OnInit {
   ngOnInit() {
     this.setupScrollSpy();
 
-    this.Navitems = [
-      {
-        label: 'Home',
-        icon: 'pi pi-home',
-        section: 'home',
-      },
-      {
-        label: 'About',
-        icon: 'pi pi-user',
-        section: 'about',
-      },
-      {
-        label: 'Education',
-        icon: 'pi pi-graduation-cap',
-        section: 'education',
-      },
-      {
-        label: 'Experience',
-        icon: 'pi pi-briefcase',
-        section: 'experience',
-      },
-      {
-        label: 'Projects',
-        icon: 'pi pi-palette',
-        section: 'projects',
-      },
-      {
-        label: 'Skills',
-        icon: 'pi pi-code',
-        section: 'skills',
-      },
+    this.navItems = [
+      { label: 'Home',       icon: 'assets/icons/ui/house.svg',          section: 'home' },
+      { label: 'About',      icon: 'assets/icons/ui/user.svg',           section: 'about' },
+      { label: 'Education',  icon: 'assets/icons/ui/graduation-cap.svg', section: 'education' },
+      { label: 'Experience', icon: 'assets/icons/ui/briefcase.svg',      section: 'experience' },
+      { label: 'Projects',   icon: 'assets/icons/ui/palette.svg',        section: 'projects' },
+      { label: 'Skills',     icon: 'assets/icons/ui/code.svg',           section: 'skills' },
     ];
   }
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
-    if (this.menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = this.menuOpen ? 'hidden' : 'auto';
   }
 
   closeMenu(): void {
@@ -80,25 +48,15 @@ export class Navbar implements OnInit {
     if (this.router.url !== '/') {
       this.router.navigate(['/'], { fragment: sectionId });
     } else {
-      this.router
-        .navigate([], {
-          fragment: sectionId,
-          queryParamsHandling: 'preserve',
-        })
-        .then(() => {
-          this.smoothScroll(sectionId);
-        });
+      this.router.navigate([], { fragment: sectionId, queryParamsHandling: 'preserve' })
+        .then(() => this.smoothScroll(sectionId));
     }
   }
 
   private smoothScroll(sectionId: string): void {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-        inline: 'nearest',
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
     }
   }
 
@@ -118,27 +76,21 @@ export class Navbar implements OnInit {
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any): void {
+  onResize(_event: UIEvent): void {
     if (window.innerWidth > 767 && this.menuOpen) {
       this.closeMenu();
     }
   }
 
   @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollThreshold = 50;
-
-    this.hasShadow = window.scrollY > scrollThreshold;
+  onWindowScroll(): void {
+    this.hasShadow = window.scrollY > 50;
   }
 
-  // Cerrar menú al hacer click fuera
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent): void {
     const target = event.target as HTMLElement;
-    const navbar = target.closest('.navbar');
-    const hamburgerBtn = target.closest('.hamburger-btn');
-
-    if (this.menuOpen && navbar && !hamburgerBtn) {
+    if (this.menuOpen && target.closest('.navbar') && !target.closest('.hamburger-btn')) {
       this.closeMenu();
     }
   }

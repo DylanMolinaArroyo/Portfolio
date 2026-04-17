@@ -1,25 +1,3 @@
 .card-text ul {
   padding-left: 20px;
 }
-
-/* Personalización de los indicadores del carrusel de PrimeNG */
-:host ::ng-deep .p-carousel-indicators .p-link {
-  background-color: #0f3460;
-}
-
-:host ::ng-deep .p-highlight .p-link {
-  background-color: #e94560 !important;
-}
-
-/* CAROUSEL ELEMENTS*/
-
-:host ::ng-deep .personalized-carousel .p-carousel-indicator .p-carousel-indicator-button {
-  background: var(--text-color-dark) !important;
-  transition: background 0.3s ease;
-}
-
-:host ::ng-deep .personalized-carousel .p-carousel-indicator-active .p-carousel-indicator-button {
-  background: var(--title-color-complementary-dark) !important;
-}
-
-/* CAROUSEL ELEMENTS*/

@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
 
 export interface ExperienceItem {
   role: string;
@@ -15,13 +14,13 @@ export interface ExperienceItem {
 
 @Component({
   selector: 'app-experience',
-  imports: [CarouselModule, CommonModule, ButtonModule, TagModule],
+  imports: [CarouselModule, ButtonModule, TagModule],
   templateUrl: './experience.html',
   styleUrl: './experience.css',
 })
-export class Experience {
+export class Experience implements OnInit {
   experiences: ExperienceItem[] = [];
-  responsiveOptions: any[] | undefined;
+  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
 
   ngOnInit() {
     this.experiences = [
@@ -35,12 +34,6 @@ export class Experience {
         ],
         tags: ['React', 'TypeScript', 'GraphQL'],
       },
-    ];
-
-    this.responsiveOptions = [
-      { breakpoint: '1280px', numVisible: 3, numScroll: 1 },
-      { breakpoint: '1024px', numVisible: 2, numScroll: 1 },
-      { breakpoint: '768px', numVisible: 1, numScroll: 1 },
     ];
   }
 }
