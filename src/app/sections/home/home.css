@@ -66,10 +66,9 @@
 }
 
 .cr-link:hover,
-.cr-link:hover .location-link {
+.cr-link:hover .location-link .location-icon {
   color: black;
   font-weight: bold;
-  -webkit-text-stroke: 0.5px black;
 }
 
 .location-icon,

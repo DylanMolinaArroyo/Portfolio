@@ -1,0 +1,20 @@
+<div class="carousel-wrapper">
+  <button class="carousel-btn" (click)="prev()" aria-label="Previous slide">
+    <img src="assets/icons/ui/chevron-left.svg" class="chevron-icon" alt="" />
+  </button>
+
+  <div class="carousel-track" #track>
+    @for (item of items; track $index) {
+      <div class="carousel-slide">
+        <ng-container
+          [ngTemplateOutlet]="itemTemplate"
+          [ngTemplateOutletContext]="{ $implicit: item }"
+        ></ng-container>
+      </div>
+    }
+  </div>
+
+  <button class="carousel-btn" (click)="next()" aria-label="Next slide">
+    <img src="assets/icons/ui/chevron-right.svg" class="chevron-icon" alt="" />
+  </button>
+</div>

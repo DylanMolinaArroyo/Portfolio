@@ -1,8 +1,6 @@
-import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
-import { TagModule } from 'primeng/tag';
-import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
+import { CarouselComponent } from '../../shared/carousel/carousel.component';
 
 export interface Project {
   title: string;
@@ -16,20 +14,18 @@ export interface Project {
 
 @Component({
   selector: 'app-projects',
-  imports: [ScrollAnimateDirective, CarouselModule, TagModule],
+  imports: [ScrollAnimateDirective, CarouselComponent],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
 export class Projects implements OnInit {
   projects: Project[] = [];
-  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
 
   ngOnInit() {
     this.projects = [
       {
         title: 'Game_Hub',
-        description:
-          'React application to explore video game data and practice core React concepts.',
+        description: 'React application to explore video game data and practice core React concepts.',
         image: 'assets/projects/nn-visualizer.jpg',
         link: 'https://demo.com',
         code: 'https://github.com/DylanMolinaArroyo/Game_Hub.git',
@@ -57,16 +53,16 @@ export class Projects implements OnInit {
     ];
   }
 
-  getSeverity(status: string) {
+  getWebpSrc(src: string): string {
+    return src.replace(/.(jpg|jpeg|png)$/i, '.webp');
+  }
+
+  getSeverity(status: string): string {
     switch (status) {
-      case 'Completed':
-        return 'success';
-      case 'In Progress':
-        return 'warn';
-      case 'Beta':
-        return 'info';
-      default:
-        return 'secondary';
+      case 'Completed': return 'success';
+      case 'In Progress': return 'warn';
+      case 'Beta': return 'info';
+      default: return 'secondary';
     }
   }
 }

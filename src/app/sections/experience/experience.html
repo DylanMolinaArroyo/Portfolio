@@ -6,17 +6,8 @@
         Some of the learning experiences that have contributed to my development.
       </p>
     </div>
-    <p-carousel
-      scrollAnimate [animateDelay]="150"
-      class="personalized-carousel"
-      [value]="experiences"
-      [numVisible]="3"
-      [numScroll]="1"
-      [circular]="true"
-      [responsiveOptions]="responsiveOptions"
-      autoplayInterval="5000"
-    >
-      <ng-template pTemplate="item" let-experience>
+    <app-carousel scrollAnimate [animateDelay]="150" [items]="experiences" [autoplayInterval]="5000">
+      <ng-template let-experience>
         <div class="card dark-card">
           <div class="card-content">
             <div class="card-header">
@@ -41,6 +32,6 @@
           </div>
         </div>
       </ng-template>
-    </p-carousel>
+    </app-carousel>
   </div>
 </section>

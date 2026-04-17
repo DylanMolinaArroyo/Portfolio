@@ -1,7 +1,6 @@
-import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
-import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
+import { CarouselComponent } from '../../shared/carousel/carousel.component';
 
 export interface EducationItem {
   feat: string;
@@ -12,13 +11,12 @@ export interface EducationItem {
 
 @Component({
   selector: 'app-education',
-  imports: [ScrollAnimateDirective, CarouselModule],
+  imports: [ScrollAnimateDirective, CarouselComponent],
   templateUrl: './education.html',
   styleUrl: './education.css',
 })
 export class Education implements OnInit {
   items: EducationItem[] = [];
-  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
 
   ngOnInit() {
     this.items = [

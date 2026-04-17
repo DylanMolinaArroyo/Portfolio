@@ -1,24 +1,13 @@
 <section id="education" class="dark-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-dark">
-        Education & Certifications
-      </h2>
+      <h2 class="responsive-title section-title-dark">Education & Certifications</h2>
       <p class="responsive-text section-text-dark">
         Some of the learning experiences that have contributed to my development.
       </p>
     </div>
-    <p-carousel
-      scrollAnimate [animateDelay]="150"
-      class="personalized-carousel"
-      [value]="items"
-      [numVisible]="3"
-      [numScroll]="1"
-      [circular]="true"
-      [responsiveOptions]="responsiveOptions"
-      autoplayInterval="5000"
-    >
-      <ng-template pTemplate="item" let-education>
+    <app-carousel scrollAnimate [animateDelay]="150" [items]="items" [autoplayInterval]="5000">
+      <ng-template let-education>
         <div class="card dark-card">
           <div class="card-content">
             <div class="card-header">
@@ -38,6 +27,6 @@
           </div>
         </div>
       </ng-template>
-    </p-carousel>
+    </app-carousel>
   </div>
 </section>

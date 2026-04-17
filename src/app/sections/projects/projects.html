@@ -6,25 +6,15 @@
         Here are some of the projects that I've worked on
       </p>
     </div>
-    <p-carousel
-      scrollAnimate [animateDelay]="150"
-      class="personalized-carousel"
-      [value]="projects"
-      [numVisible]="3"
-      [numScroll]="1"
-      [circular]="true"
-      [responsiveOptions]="responsiveOptions"
-      autoplayInterval="5000"
-    >
-      <ng-template pTemplate="item" let-project>
+    <app-carousel scrollAnimate [animateDelay]="150" [items]="projects" [autoplayInterval]="5000">
+      <ng-template let-project>
         <div class="card light-card">
           <div class="project-image-container">
-            <img [src]="project.image" [alt]="project.title" class="project-image" />
-            <p-tag
-              [value]="project.status"
-              [severity]="getSeverity(project.status)"
-              class="status-tag"
-            ></p-tag>
+            <picture>
+            <source [srcset]="getWebpSrc(project.image)" type="image/webp" />
+            <img [src]="project.image" [alt]="project.title" class="project-image" loading="lazy" />
+          </picture>
+            <span class="status-tag status-{{ getSeverity(project.status) }}">{{ project.status }}</span>
           </div>
           <div class="card-content">
             <h3 class="card-title">{{ project.title }}</h3>
@@ -46,6 +36,6 @@
           </div>
         </div>
       </ng-template>
-    </p-carousel>
+    </app-carousel>
   </div>
 </section>

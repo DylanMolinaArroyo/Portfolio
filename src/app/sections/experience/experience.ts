@@ -1,8 +1,6 @@
-import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
-import { TagModule } from 'primeng/tag';
-import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
+import { CarouselComponent } from '../../shared/carousel/carousel.component';
 
 export interface ExperienceItem {
   role: string;
@@ -14,13 +12,12 @@ export interface ExperienceItem {
 
 @Component({
   selector: 'app-experience',
-  imports: [ScrollAnimateDirective, CarouselModule, TagModule],
+  imports: [ScrollAnimateDirective, CarouselComponent],
   templateUrl: './experience.html',
   styleUrl: './experience.css',
 })
 export class Experience implements OnInit {
   experiences: ExperienceItem[] = [];
-  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
 
   ngOnInit() {
     this.experiences = [

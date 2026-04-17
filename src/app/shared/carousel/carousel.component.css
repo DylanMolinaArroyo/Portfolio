@@ -1,0 +1,65 @@
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/* Hide scrollbar, keep scroll functionality */
+.carousel-track {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile: 1 visible */
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* Tablet: 2 visible */
+@media (min-width: 768px) {
+  .carousel-slide {
+    flex: 0 0 50%;
+  }
+}
+
+/* Desktop: 3 visible */
+@media (min-width: 1024px) {
+  .carousel-slide {
+    flex: 0 0 33.333%;
+  }
+}
+
+/* Nav buttons */
+.carousel-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: 1px solid rgba(88, 164, 176, 0.4);
+  background: rgba(88, 164, 176, 0.1);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(88, 164, 176, 0.25);
+}
+
+.chevron-icon {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) saturate(100%) invert(58%) sepia(20%) saturate(600%) hue-rotate(155deg);
+}
