@@ -31,7 +31,9 @@
   font-size: 0.85rem;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .btn-demo {
@@ -73,4 +75,38 @@
 
 .btn-code:hover .ui-icon {
   filter: brightness(0) invert(1);
+}
+
+/* ── MOBILE (default, < 768px) ──────────────────────────── */
+
+#projects .content {
+  padding: 2.5rem 0.5rem;
+}
+
+#projects .text-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#projects .card-content {
+  padding: 1rem;
+}
+
+.project-image-container {
+  height: 160px;
+}
+
+/* ── TABLET (768px+) ────────────────────────────── */
+@media (min-width: 768px) {
+  #projects .text-section {
+    text-align: left;
+  }
+
+  #projects .card-content {
+    padding: 1.5rem;
+  }
+
+  .project-image-container {
+    height: 200px;
+  }
 }

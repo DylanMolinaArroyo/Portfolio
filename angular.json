@@ -26,7 +26,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css", "src/animated_background.css"],
+            "styles": ["src/styles.css"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {

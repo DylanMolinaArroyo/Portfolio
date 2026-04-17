@@ -1,3 +1,4 @@
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
@@ -15,7 +16,7 @@ export interface Project {
 
 @Component({
   selector: 'app-projects',
-  imports: [CarouselModule, TagModule],
+  imports: [ScrollAnimateDirective, CarouselModule, TagModule],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })

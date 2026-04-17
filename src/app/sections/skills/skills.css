@@ -1,0 +1,102 @@
+/* ── MOBILE (default, < 768px) ──────────────────────────── */
+
+#skills .content {
+  padding: 2.5rem 1.25rem;
+}
+
+#skills .text-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Soft skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+#skills .card-content {
+  padding: 1rem;
+}
+
+/* Tech stack */
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem 0.75rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tech-item img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.tech-name {
+  font-size: 0.7rem;
+  color: var(--text-color-light);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+}
+
+/* ── TABLET (768px+) ────────────────────────────── */
+@media (min-width: 768px) {
+  #skills .text-section {
+    text-align: left;
+  }
+
+  #skills .card-content {
+    padding: 1.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-stack {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem 1rem;
+  }
+
+  .tech-item img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .tech-name {
+    font-size: 0.75rem;
+  }
+}
+
+/* ── DESKTOP (1280px+) ──────────────────────────── */
+@media (min-width: 1280px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tech-item img {
+    width: 50px;
+    height: 50px;
+  }
+}

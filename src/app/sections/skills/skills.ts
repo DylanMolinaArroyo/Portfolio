@@ -1,6 +1,5 @@
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
-import { CarouselModule } from 'primeng/carousel';
-import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
 
 export interface TechnologyItem {
   icon: string;
@@ -14,26 +13,25 @@ export interface Skill {
 
 @Component({
   selector: 'app-skills',
-  imports: [CarouselModule],
+  imports: [ScrollAnimateDirective, ],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
 export class Skills implements OnInit {
-  responsiveOptions: ResponsiveOption[] = DEFAULT_CAROUSEL_OPTIONS;
   technologies: TechnologyItem[] = [];
   skills: Skill[] = [];
 
   ngOnInit() {
     this.technologies = [
-      { icon: '../assets/icons/skills/postgresql.svg', name: 'Postgresql' },
-      { icon: '../assets/icons/skills/github.svg', name: 'Github' },
-      { icon: '../assets/icons/skills/mongodb.svg', name: 'Mongodb' },
+      { icon: '../assets/icons/skills/postgresql.svg', name: 'PostgreSQL' },
+      { icon: '../assets/icons/skills/github.svg', name: 'GitHub' },
+      { icon: '../assets/icons/skills/mongodb.svg', name: 'MongoDB' },
       { icon: '../assets/icons/skills/supabase.svg', name: 'Supabase' },
       { icon: '../assets/icons/skills/go.svg', name: 'Go' },
-      { icon: '../assets/icons/skills/typescript.svg', name: 'Typescript' },
+      { icon: '../assets/icons/skills/typescript.svg', name: 'TypeScript' },
       { icon: '../assets/icons/skills/firebase.svg', name: 'Firebase' },
       { icon: '../assets/icons/skills/python.svg', name: 'Python' },
-      { icon: '../assets/icons/skills/nodejs.svg', name: 'Nodejs' },
+      { icon: '../assets/icons/skills/nodejs.svg', name: 'Node.js' },
       { icon: '../assets/icons/skills/java.svg', name: 'Java' },
       { icon: '../assets/icons/skills/angular.svg', name: 'Angular' },
       { icon: '../assets/icons/skills/react.svg', name: 'React' },

@@ -2,7 +2,7 @@
   <!-- Logo -->
   <div class="nav-start">
     <div class="logo" (click)="scrollToSection('home')">
-      <img src="assets/icons/ui/code.svg" class="ui-icon logo-icon" alt="">
+      <img src="assets/icons/page/portfolio.svg" class="page-icon" alt="" />
       <span>Portfolio</span>
     </div>
   </div>
@@ -10,9 +10,9 @@
   <!-- Hamburger -->
   <button class="hamburger-btn" (click)="toggleMenu()" aria-label="Toggle menu">
     @if (menuOpen) {
-      <img src="assets/icons/ui/x.svg" class="ui-icon" alt="Close menu">
+      <img src="assets/icons/ui/x.svg" class="ui-icon" alt="Close menu" />
     } @else {
-      <img src="assets/icons/ui/menu.svg" class="ui-icon" alt="Open menu">
+      <img src="assets/icons/ui/menu.svg" class="ui-icon" alt="Open menu" />
     }
   </button>
 
@@ -22,7 +22,7 @@
       @for (item of navItems; track item) {
         <li>
           <button class="btn-nav" (click)="scrollToSection(item.section); closeMenu()">
-            <img [src]="item.icon" class="ui-icon" alt="">
+            <img [src]="item.icon" class="ui-icon" alt="" />
             <span>{{ item.label }}</span>
           </button>
         </li>
@@ -31,14 +31,26 @@
 
     <!-- Social links -->
     <ul class="sns-bar">
-      <button class="btn-sns btn-github" (click)="openLink('https://github.com/DylanMolinaArroyo')" aria-label="GitHub">
-        <img src="assets/icons/ui/github.svg" class="ui-icon" alt="">
+      <button
+        class="btn-sns btn-github"
+        (click)="openLink('https://github.com/DylanMolinaArroyo')"
+        aria-label="GitHub"
+      >
+        <img src="assets/icons/ui/github.svg" class="ui-icon" alt="" />
       </button>
-      <button class="btn-sns btn-linkedin" (click)="openLink('https://linkedin.com/in/dylan-molina-arroyo-457360306')" aria-label="LinkedIn">
-        <img src="assets/icons/ui/linkedin.svg" class="ui-icon" alt="">
+      <button
+        class="btn-sns btn-linkedin"
+        (click)="openLink('https://linkedin.com/in/dylan-molina-arroyo-457360306')"
+        aria-label="LinkedIn"
+      >
+        <img src="assets/icons/ui/linkedin.svg" class="ui-icon" alt="" />
       </button>
-      <button class="btn-sns btn-email" (click)="openLink('mailto:molina_dylan@outlook.com')" aria-label="Email">
-        <img src="assets/icons/ui/mail.svg" class="ui-icon" alt="">
+      <button
+        class="btn-sns btn-email"
+        (click)="openLink('mailto:molina_dylan@outlook.com')"
+        aria-label="Email"
+      >
+        <img src="assets/icons/ui/mail.svg" class="ui-icon" alt="" />
       </button>
     </ul>
   </div>

@@ -1,6 +1,6 @@
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
 
@@ -14,7 +14,7 @@ export interface ExperienceItem {
 
 @Component({
   selector: 'app-experience',
-  imports: [CarouselModule, ButtonModule, TagModule],
+  imports: [ScrollAnimateDirective, CarouselModule, TagModule],
   templateUrl: './experience.html',
   styleUrl: './experience.css',
 })

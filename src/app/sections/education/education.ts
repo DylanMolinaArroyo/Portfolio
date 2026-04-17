@@ -1,3 +1,4 @@
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { DEFAULT_CAROUSEL_OPTIONS, ResponsiveOption } from '../../shared/carousel.config';
@@ -11,7 +12,7 @@ export interface EducationItem {
 
 @Component({
   selector: 'app-education',
-  imports: [CarouselModule],
+  imports: [ScrollAnimateDirective, CarouselModule],
   templateUrl: './education.html',
   styleUrl: './education.css',
 })

@@ -1,0 +1,96 @@
+.responsive-title {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.responsive-subtitle {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 0.75rem;
+}
+
+.responsive-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.section-title-dark {
+  color: var(--title-color-dark);
+}
+.section-title-light {
+  color: var(--title-color-light);
+}
+.section-text-dark {
+  color: var(--text-color-dark);
+}
+.section-text-light {
+  color: var(--text-color-light);
+}
+.section-subtitle-dark {
+  color: var(--text-color-dark);
+}
+
+/* TABLET (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .responsive-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .responsive-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .responsive-text {
+    font-size: 1rem;
+    max-width: 85%;
+  }
+}
+
+/* SMALL LAPTOP (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .responsive-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .responsive-subtitle {
+    font-size: 1.5rem;
+  }
+  .responsive-text {
+    font-size: 1rem;
+    max-width: 65ch;
+  }
+}
+
+/* DESKTOP (1280px - 1535px) */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .responsive-title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+  }
+  .responsive-subtitle {
+    font-size: 2rem;
+  }
+  .responsive-text {
+    font-size: 1.125rem;
+    max-width: 70ch;
+  }
+}
+
+/* WIDESCREEN 27"+ (1536px+) */
+@media (min-width: 1536px) {
+  .responsive-title {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  .responsive-subtitle {
+    font-size: 2.5rem;
+  }
+  .responsive-text {
+    font-size: 1.25rem;
+    max-width: 75ch;
+  }
+}

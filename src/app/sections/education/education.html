@@ -1,42 +1,39 @@
-<section id="experience" class="dark-section">
+<section id="education" class="dark-section">
   <div class="column content">
-    <div class="text-section">
-      <h2 class="responsive-title section-title-dark">My Work Experience</h2>
+    <div class="text-section" scrollAnimate>
+      <h2 class="responsive-title section-title-dark">
+        Education & Certifications
+      </h2>
       <p class="responsive-text section-text-dark">
         Some of the learning experiences that have contributed to my development.
       </p>
     </div>
     <p-carousel
+      scrollAnimate [animateDelay]="150"
       class="personalized-carousel"
-      [value]="experiences"
+      [value]="items"
       [numVisible]="3"
       [numScroll]="1"
       [circular]="true"
       [responsiveOptions]="responsiveOptions"
       autoplayInterval="5000"
     >
-      <ng-template pTemplate="item" let-experience>
+      <ng-template pTemplate="item" let-education>
         <div class="card dark-card">
           <div class="card-content">
             <div class="card-header">
               <div>
-                <div class="card-title">{{ experience.role }}</div>
-                <div class="card-subtitle">{{ experience.company }}</div>
+                <div class="card-title">{{ education.feat }}</div>
+                <div class="card-subtitle">{{ education.institution }}</div>
               </div>
-              <span class="card-year">{{ experience.year }}</span>
+              <span class="card-year">{{ education.year }}</span>
             </div>
-
             <div class="card-text">
               <ul>
-                @for (desc of experience.description; track desc) {
+                @for (desc of education.description; track desc) {
                   <li>{{ desc }}</li>
                 }
               </ul>
-            </div>
-            <div class="tags">
-              @for (tag of experience.tags; track tag) {
-                <span class="tag">{{ tag }}</span>
-              }
             </div>
           </div>
         </div>

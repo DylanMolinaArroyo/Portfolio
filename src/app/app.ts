@@ -5,12 +5,12 @@ import { PrimeNG } from 'primeng/config';
 
 import { Navbar } from './components/navbar/navbar';
 
-import { Home } from './pages/home/home';
-import { About } from './pages/about/about';
-import { Experience } from './pages/experience/experience';
-import { Projects } from './pages/projects/projects';
-import { Skills } from './pages/skills/skills';
-import { Education } from './pages/education/education';
+import { Home } from './sections/home/home';
+import { About } from './sections/about/about';
+import { Experience } from './sections/experience/experience';
+import { Projects } from './sections/projects/projects';
+import { Skills } from './sections/skills/skills';
+import { Education } from './sections/education/education';
 
 @Component({
   selector: 'app-root',

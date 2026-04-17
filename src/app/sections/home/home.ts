@@ -1,9 +1,9 @@
+import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component } from '@angular/core';
-import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-home',
-  imports: [CardModule],
+  imports: [ScrollAnimateDirective],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

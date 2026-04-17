@@ -1,5 +1,14 @@
-/* Animated background — single fixed layer shared across all sections */
+.dark-section {
+  background-color: var(--background-color-dark);
+}
+.light-section {
+  background-color: var(--background-color-light);
+}
 
+/*
+  Single fixed layer shared across all sections.
+  z-index: 1 places cubes above section backgrounds but below .content (z-index: 2).
+*/
 .page-background {
   position: fixed;
   top: 0;
@@ -10,7 +19,6 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  /* z-index: 1 places cubes above section background colors but below content (z-index: 2) */
   z-index: 1;
   pointer-events: none;
 }
@@ -20,12 +28,10 @@
   display: block;
   width: 20px;
   height: 20px;
-  /* Teal from the portfolio palette — visible on both dark and light section backgrounds */
   background: rgba(88, 164, 176, 0.2);
-  animation: animate 19s linear infinite;
+  animation: cubeFloat 19s linear infinite;
 }
 
-/* Cube positions, sizes and animation delays */
 .page-background li:nth-child(1) {
   left: 8%;
   width: 119px;
@@ -132,27 +138,7 @@
   animation-delay: 6s;
 }
 
-/* Section background colors sit below the cubes (no z-index = auto, below z-index: 1) */
-.dark-section {
-  background-color: var(--background-color-dark);
-}
-
-.light-section {
-  background-color: var(--background-color-light);
-}
-
-/*
-  Content must be above the cubes.
-  Sections have position: relative but no explicit z-index, so they don't form a stacking
-  context — .content's z-index: 2 participates directly in the root stacking context,
-  placing it above the fixed cubes at z-index: 1.
-*/
-.content {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes animate {
+@keyframes cubeFloat {
   0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
@@ -163,4 +149,10 @@
     opacity: 0;
     border-radius: 50%;
   }
+}
+
+/* Content must sit above the fixed cube layer */
+.content {
+  position: relative;
+  z-index: 2;
 }

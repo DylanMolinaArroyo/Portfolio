@@ -1,35 +1,28 @@
 <section id="skills" class="light-section">
   <div class="column content">
-    <div class="text-section">
+    <div class="text-section" scrollAnimate>
       <h2 class="responsive-title section-title-light">Skills</h2>
       <p class="responsive-text section-text-light">
         I integrate technical proficiency and interpersonal strengths to build high-impact software.
       </p>
     </div>
 
-    <p-carousel
-      class="personalized-carousel"
-      [value]="skills"
-      [numVisible]="3"
-      [numScroll]="1"
-      [circular]="true"
-      [responsiveOptions]="responsiveOptions"
-      autoplayInterval="5000"
-    >
-      <ng-template pTemplate="item" let-skill>
-        <div class="card light-card">
+    <div class="skills-grid">
+      @for (skill of skills; track skill.title; let i = $index) {
+        <div class="card light-card" scrollAnimate [animateDelay]="i * 80">
           <div class="card-content">
             <h3 class="card-title">{{ skill.title }}</h3>
             <p class="card-text">{{ skill.description }}</p>
           </div>
         </div>
-      </ng-template>
-    </p-carousel>
+      }
+    </div>
 
     <div class="tech-stack">
-      @for (item of technologies; track item.name) {
-        <div class="tech-item" [attr.data-name]="item.name">
-          <img [src]="item.icon" />
+      @for (item of technologies; track item.name; let i = $index) {
+        <div class="tech-item" scrollAnimate [animateDelay]="i * 50">
+          <img [src]="item.icon" [alt]="item.name" />
+          <span class="tech-name">{{ item.name }}</span>
         </div>
       }
     </div>

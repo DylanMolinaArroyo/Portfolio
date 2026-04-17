@@ -25,12 +25,12 @@ export class Navbar implements OnInit {
     this.setupScrollSpy();
 
     this.navItems = [
-      { label: 'Home',       icon: 'assets/icons/ui/house.svg',          section: 'home' },
-      { label: 'About',      icon: 'assets/icons/ui/user.svg',           section: 'about' },
-      { label: 'Education',  icon: 'assets/icons/ui/graduation-cap.svg', section: 'education' },
-      { label: 'Experience', icon: 'assets/icons/ui/briefcase.svg',      section: 'experience' },
-      { label: 'Projects',   icon: 'assets/icons/ui/palette.svg',        section: 'projects' },
-      { label: 'Skills',     icon: 'assets/icons/ui/code.svg',           section: 'skills' },
+      { label: 'Home', icon: 'assets/icons/ui/house.svg', section: 'home' },
+      { label: 'About', icon: 'assets/icons/ui/user.svg', section: 'about' },
+      { label: 'Education', icon: 'assets/icons/ui/graduation-cap.svg', section: 'education' },
+      { label: 'Projects', icon: 'assets/icons/ui/palette.svg', section: 'projects' },
+      { label: 'Experience', icon: 'assets/icons/ui/briefcase.svg', section: 'experience' },
+      { label: 'Skills', icon: 'assets/icons/ui/code.svg', section: 'skills' },
     ];
   }
 
@@ -48,7 +48,8 @@ export class Navbar implements OnInit {
     if (this.router.url !== '/') {
       this.router.navigate(['/'], { fragment: sectionId });
     } else {
-      this.router.navigate([], { fragment: sectionId, queryParamsHandling: 'preserve' })
+      this.router
+        .navigate([], { fragment: sectionId, queryParamsHandling: 'preserve' })
         .then(() => this.smoothScroll(sectionId));
     }
   }

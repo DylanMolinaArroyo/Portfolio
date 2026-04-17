@@ -1,0 +1,44 @@
+/* ── MOBILE (default, < 768px) ──────────────────────────── */
+
+#education .content {
+  padding: 2.5rem 0.5rem;
+}
+
+#education .text-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Tighter card padding on small screens */
+#education .card-content {
+  padding: 1rem;
+}
+
+/* Stack header: year badge drops below title/institution */
+#education .card-header {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.card-text ul {
+  padding-left: 1.25rem;
+}
+
+/* ── TABLET (768px+) ────────────────────────────── */
+@media (min-width: 768px) {
+  #education .text-section {
+    text-align: left;
+  }
+
+  #education .card-content {
+    padding: 1.5rem;
+  }
+
+  /* Restore side-by-side header layout */
+  #education .card-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+  }
+}

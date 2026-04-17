@@ -1,0 +1,143 @@
+/* Location container */
+.location-container {
+  margin-top: 1rem;
+}
+
+.location-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: brightness(0) invert(1);
+}
+
+.location-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Avatar */
+.avatar-image {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.avatar-image:hover {
+  transform: scale(1.05);
+  outline: 2px solid var(--title-color-dark);
+  outline-offset: 4px;
+}
+
+/* CR flag link */
+.cr-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 12px 4px 8px;
+  border-radius: 6px;
+  overflow: hidden;
+  color: var(--text-color-dark);
+  transition: color 0.35s ease;
+  cursor: pointer;
+}
+
+.cr-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #002b7f 0% 20%,
+    #ffffff 20% 36%,
+    #ce1126 36% 64%,
+    #ffffff 64% 80%,
+    #002b7f 80% 100%
+  );
+  transform: translateX(-105%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.cr-link:hover::before {
+  transform: translateX(0);
+}
+
+.cr-link:hover,
+.cr-link:hover .location-link {
+  color: black;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px black;
+}
+
+.location-icon,
+.location-link {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── MOBILE (default, < 768px) ──────────────────────────── */
+
+#home {
+  padding-top: var(--nav-bar-min-height-mobile, 62px);
+}
+
+/* Stack: avatar on top, text below — centred */
+#home .responsive-grid {
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.25rem;
+  gap: 1.75rem;
+}
+
+#home .column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── TABLET (768px – 1023px) ────────────────────────────── */
+@media (min-width: 768px) {
+  #home {
+    padding-top: 0;
+  }
+
+  #home .responsive-grid {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+
+  #home .column {
+    align-items: flex-start;
+  }
+
+  .avatar-image {
+    max-width: 270px;
+  }
+}
+
+/* ── SMALL LAPTOP (1024px – 1279px) ────────────────────── */
+@media (min-width: 1024px) {
+  .avatar-image {
+    max-width: 320px;
+  }
+}
+
+/* ── DESKTOP (1280px – 1535px) ─────────────────────────── */
+@media (min-width: 1280px) {
+  .avatar-image {
+    max-width: 300px;
+  }
+}
+
+/* ── WIDESCREEN 27"+ (≥ 1536px) ────────────────────────── */
+@media (min-width: 1536px) {
+  .avatar-image {
+    max-width: 450px;
+  }
+}
