@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { CarouselComponent } from '../../shared/carousel/carousel.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface Project {
   title: string;
@@ -14,7 +15,7 @@ export interface Project {
 
 @Component({
   selector: 'app-projects',
-  imports: [ScrollAnimateDirective, CarouselComponent],
+  imports: [ScrollAnimateDirective, CarouselComponent, TranslatePipe],
   templateUrl: './projects.html',
   styleUrl: './projects.css',
 })
@@ -25,8 +26,7 @@ export class Projects implements OnInit {
     this.projects = [
       {
         title: 'Game Hub',
-        description:
-          'React application built with TypeScript, Vite, Firebase, and the RAWG API to explore video game data and practice core React concepts.',
+        description: 'PROJECTS.GAME_HUB.DESCRIPTION',
         image: 'assets/projects/game-hub.jpg',
         link: '#',
         code: 'https://github.com/DylanMolinaArroyo/Game_Hub',
@@ -35,8 +35,7 @@ export class Projects implements OnInit {
       },
       {
         title: 'Tecno Tanks',
-        description:
-          'Modern Python/Pygame game inspired by Battle City (1990). Implements process management, thread synchronization, inter-thread communication, and real-time resource control in a client-server architecture.',
+        description: 'PROJECTS.TECNO_TANKS.DESCRIPTION',
         image: 'assets/projects/tecno-tanks.jpg',
         link: '#',
         code: 'https://github.com/DylanMolinaArroyo/Tecno_Tanks',
@@ -45,8 +44,7 @@ export class Projects implements OnInit {
       },
       {
         title: 'Database Schema Visualizer',
-        description:
-          'Web-based application to dynamically connect to different relational database engines and visualize their database schema.',
+        description: 'PROJECTS.DB_VISUALIZER.DESCRIPTION',
         image: 'assets/projects/db-visualizer.jpg',
         link: '#',
         code: 'https://github.com/DylanMolinaArroyo/Database_Schema_Visualizer',
@@ -55,8 +53,7 @@ export class Projects implements OnInit {
       },
       {
         title: 'Christmas Compiler',
-        description:
-          'Java-based academic compiler implementing lexical, syntactic, and semantic analysis using JFLEX and Java CUP, including symbol table management and semantic validation.',
+        description: 'PROJECTS.CHRISTMAS_COMPILER.DESCRIPTION',
         image: 'assets/projects/christmas-compiler.jpg',
         link: '#',
         code: 'https://github.com/DylanMolinaArroyo/Christmas_Compiler',
@@ -65,8 +62,7 @@ export class Projects implements OnInit {
       },
       {
         title: 'Mini-SNS',
-        description:
-          'Simple social networking service to practice full-stack development. Implements user authentication, post creation, friend management, comments, and likes.',
+        description: 'PROJECTS.MINI_SNS.DESCRIPTION',
         image: 'assets/projects/mini-sns.jpg',
         link: '#',
         code: 'https://github.com/DylanMolinaArroyo/Mini-SNS',

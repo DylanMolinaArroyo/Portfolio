@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { CarouselComponent } from '../../shared/carousel/carousel.component';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface CertificationItem {
   title: string;
@@ -11,7 +12,7 @@ export interface CertificationItem {
 
 @Component({
   selector: 'app-certifications',
-  imports: [ScrollAnimateDirective, CarouselComponent],
+  imports: [ScrollAnimateDirective, CarouselComponent, TranslatePipe],
   templateUrl: './certifications.html',
   styleUrl: './certifications.css',
 })

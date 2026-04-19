@@ -1,0 +1,103 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "EDUCATION": "Education",
+    "CERTIFICATIONS": "Certifications",
+    "PROJECTS": "Projects",
+    "EXPERIENCE": "Experience",
+    "SKILLS": "Skills"
+  },
+  "HOME": {
+    "SUBTITLE": "Computer Engineer"
+  },
+  "ABOUT": {
+    "TITLE": "About Me",
+    "TEXT": "I'm a Costa Rican software engineer passionate about web development, cybersecurity, and data. Driven by curiosity and a constant desire to learn, whether it's improving my coding skills or building more secure and resilient systems."
+  },
+  "EDUCATION": {
+    "TITLE": "Education",
+    "SUBTITLE": "Academic background that has shaped my technical foundation.",
+    "NETWORK_TECH": {
+      "FEAT": "Network Technician",
+      "DESCRIPTION": [
+        "Network infrastructure design and configuration",
+        "TCP/IP protocols and network architecture principles",
+        "LAN/WAN technologies and network topology design",
+        "Router and switch configuration (Cisco)",
+        "Network troubleshooting and diagnostic tools (Wireshark, ping, traceroute)",
+        "Network security fundamentals and threat mitigation",
+        "Network documentation and diagram creation"
+      ]
+    },
+    "COMPUTER_ENG": {
+      "FEAT": "Computer Engineering",
+      "DESCRIPTION": [
+        "System architecture design",
+        "Cloud computing solutions",
+        "Backend development with microservices and API design",
+        "Database design, optimization, and data management",
+        "Algorithm development and computational problem-solving",
+        "Cybersecurity principles and secure coding practices",
+        "Technical documentation and system specifications",
+        "Project management and cross-functional team collaboration",
+        "Research and implementation of emerging technologies"
+      ]
+    }
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certifications",
+    "SUBTITLE": "Professional certifications and credentials I have earned."
+  },
+  "EXPERIENCE": {
+    "TITLE": "My Work Experience",
+    "SUBTITLE": "Some of the experiences that have contributed to my development."
+  },
+  "PROJECTS": {
+    "TITLE": "My Projects",
+    "SUBTITLE": "Here are some of the projects that I've worked on.",
+    "GAME_HUB": {
+      "DESCRIPTION": "React application built with TypeScript, Vite, Firebase, and the RAWG API to explore video game data and practice core React concepts."
+    },
+    "TECNO_TANKS": {
+      "DESCRIPTION": "Modern Python/Pygame game inspired by Battle City (1990). Implements process management, thread synchronization, inter-thread communication, and real-time resource control in a client-server architecture."
+    },
+    "DB_VISUALIZER": {
+      "DESCRIPTION": "Web-based application to dynamically connect to different relational database engines and visualize their database schema."
+    },
+    "CHRISTMAS_COMPILER": {
+      "DESCRIPTION": "Java-based academic compiler implementing lexical, syntactic, and semantic analysis using JFLEX and Java CUP, including symbol table management and semantic validation."
+    },
+    "MINI_SNS": {
+      "DESCRIPTION": "Simple social networking service to practice full-stack development. Implements user authentication, post creation, friend management, comments, and likes."
+    }
+  },
+  "SKILLS": {
+    "TITLE": "Skills",
+    "SUBTITLE": "I integrate technical proficiency and interpersonal strengths to build high-impact software.",
+    "COLLABORATION": {
+      "TITLE": "Effective Collaboration",
+      "DESC": "I have worked seamlessly within multidisciplinary teams, fostering a positive environment and ensuring project goals were met through clear, constant communication."
+    },
+    "PROBLEM_SOLVING": {
+      "TITLE": "Adaptive Problem Solving",
+      "DESC": "I successfully tackled complex technical challenges by breaking them down into manageable tasks and finding creative, efficient solutions under pressure."
+    },
+    "LEARNING": {
+      "TITLE": "Continuous Learning",
+      "DESC": "I have demonstrated a strong commitment to professional growth by quickly mastering new technologies and staying updated with the latest industry trends."
+    },
+    "TIME_MANAGEMENT": {
+      "TITLE": "Time Management",
+      "DESC": "I consistently delivered high-quality results within tight deadlines by effectively prioritizing tasks and managing my workflow with precision."
+    },
+    "COMMUNICATION": {
+      "TITLE": "Empathetic Communication",
+      "DESC": "I have translated technical jargon into clear, actionable insights for non-technical stakeholders, ensuring everyone stayed aligned on the project vision."
+    },
+    "CRITICAL_THINKING": {
+      "TITLE": "Critical Thinking",
+      "DESC": "I analyzed project requirements from multiple perspectives to identify potential risks early and implement proactive improvements to the development process."
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import { Navbar } from './shared/navbar/navbar';
@@ -10,6 +10,9 @@ import { Experience } from './sections/experience/experience';
 import { Projects } from './sections/projects/projects';
 import { Skills } from './sections/skills/skills';
 
+import { TranslateService, TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+import translationsEN from '../../public/i18n/en.json';
+
 @Component({
   selector: 'app-root',
   imports: [Home, Navbar, About, Education, Certifications, Experience, Projects, Skills],
@@ -18,8 +21,13 @@ import { Skills } from './sections/skills/skills';
 })
 export class App {
   protected readonly title = signal('DylanMA-Portfolio');
+  private translate = inject(TranslateService);
 
   constructor(private titleService: Title) {
     this.titleService.setTitle('Dylan Molina — Software Engineer');
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setTranslation('en', translationsEN);
+    this.translate.setFallbackLang('en');
+    this.translate.use('en');
   }
 }

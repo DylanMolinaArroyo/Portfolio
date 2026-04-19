@@ -1,18 +1,16 @@
 <section id="skills" class="light-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-light">Skills</h2>
-      <p class="responsive-text section-text-light">
-        I integrate technical proficiency and interpersonal strengths to build high-impact software.
-      </p>
+      <h2 class="responsive-title section-title-light">{{ 'SKILLS.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-light">{{ 'SKILLS.SUBTITLE' | translate }}</p>
     </div>
 
     <div class="skills-grid">
       @for (skill of skills; track skill.title; let i = $index) {
         <div class="card light-card" scrollAnimate [animateDelay]="i * 80">
           <div class="card-content">
-            <h3 class="card-title">{{ skill.title }}</h3>
-            <p class="card-text">{{ skill.description }}</p>
+            <h3 class="card-title">{{ skill.title | translate }}</h3>
+            <p class="card-text">{{ skill.description | translate }}</p>
           </div>
         </div>
       }

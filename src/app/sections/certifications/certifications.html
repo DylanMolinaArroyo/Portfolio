@@ -1,10 +1,8 @@
 <section id="certifications" class="light-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-light">Certifications</h2>
-      <p class="responsive-text section-text-light">
-        Professional certifications and credentials I have earned.
-      </p>
+      <h2 class="responsive-title section-title-light">{{ 'CERTIFICATIONS.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-light">{{ 'CERTIFICATIONS.SUBTITLE' | translate }}</p>
     </div>
     <app-carousel scrollAnimate [animateDelay]="150" [items]="items" [autoplayInterval]="5000">
       <ng-template let-cert>

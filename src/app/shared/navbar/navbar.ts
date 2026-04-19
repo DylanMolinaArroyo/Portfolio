@@ -1,6 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 export interface NavItem {
   label: string;
@@ -10,7 +12,7 @@ export interface NavItem {
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
@@ -18,25 +20,46 @@ export class Navbar implements OnInit {
   navItems: NavItem[] = [];
   menuOpen = false;
   hasShadow = false;
+  currentLang = 'en';
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: object,
+  ) {}
 
   ngOnInit() {
     this.setupScrollSpy();
+    this.initLang();
 
     this.navItems = [
-      { label: 'Home', icon: 'assets/icons/ui/house.svg', section: 'home' },
-      { label: 'About', icon: 'assets/icons/ui/user.svg', section: 'about' },
-      { label: 'Education', icon: 'assets/icons/ui/graduation-cap.svg', section: 'education' },
-      {
-        label: 'Certifications',
-        icon: 'assets/icons/ui/badge-check.svg',
-        section: 'certifications',
-      },
-      { label: 'Projects', icon: 'assets/icons/ui/palette.svg', section: 'projects' },
-      { label: 'Experience', icon: 'assets/icons/ui/briefcase.svg', section: 'experience' },
-      { label: 'Skills', icon: 'assets/icons/ui/code.svg', section: 'skills' },
+      { label: 'NAV.HOME',           icon: 'assets/icons/ui/house.svg',          section: 'home' },
+      { label: 'NAV.ABOUT',          icon: 'assets/icons/ui/user.svg',            section: 'about' },
+      { label: 'NAV.EDUCATION',      icon: 'assets/icons/ui/graduation-cap.svg',  section: 'education' },
+      { label: 'NAV.CERTIFICATIONS', icon: 'assets/icons/ui/badge-check.svg',     section: 'certifications' },
+      { label: 'NAV.PROJECTS',       icon: 'assets/icons/ui/palette.svg',         section: 'projects' },
+      { label: 'NAV.EXPERIENCE',     icon: 'assets/icons/ui/briefcase.svg',       section: 'experience' },
+      { label: 'NAV.SKILLS',         icon: 'assets/icons/ui/code.svg',            section: 'skills' },
     ];
+  }
+
+  toggleLang(): void {
+    const next = this.currentLang === 'en' ? 'es' : 'en';
+    this.currentLang = next;
+    this.translate.use(next);
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('lang', next);
+    }
+  }
+
+  private initLang(): void {
+    let lang = 'en';
+    if (isPlatformBrowser(this.platformId)) {
+      lang = localStorage.getItem('lang')
+        ?? (navigator.language.startsWith('es') ? 'es' : 'en');
+    }
+    this.currentLang = lang;
+    this.translate.use(lang);
   }
 
   toggleMenu(): void {

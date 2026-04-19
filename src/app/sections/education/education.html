@@ -1,10 +1,8 @@
 <section id="education" class="dark-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-dark">Education</h2>
-      <p class="responsive-text section-text-dark">
-        Academic background that has shaped my technical foundation.
-      </p>
+      <h2 class="responsive-title section-title-dark">{{ 'EDUCATION.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-dark">{{ 'EDUCATION.SUBTITLE' | translate }}</p>
     </div>
     <app-timeline scrollAnimate [animateDelay]="150" [items]="timelineItems" theme="dark" />
   </div>

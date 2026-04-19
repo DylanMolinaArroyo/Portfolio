@@ -1,10 +1,8 @@
 <section id="projects" class="light-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-light">My Projects</h2>
-      <p class="responsive-text section-text-light">
-        Here are some of the projects that I've worked on
-      </p>
+      <h2 class="responsive-title section-title-light">{{ 'PROJECTS.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-light">{{ 'PROJECTS.SUBTITLE' | translate }}</p>
     </div>
     <app-carousel scrollAnimate [animateDelay]="150" [items]="projects" [autoplayInterval]="5000">
       <ng-template let-project>
@@ -24,7 +22,7 @@
                 <img src="assets/icons/ui/github.svg" class="ui-icon" alt="">
               </a>
             </div>
-            <p class="card-text">{{ project.description }}</p>
+            <p class="card-text">{{ project.description | translate }}</p>
             <div class="tags">
               @for (tag of project.tags; track tag) {
                 <span class="tag">{{ tag }}</span>

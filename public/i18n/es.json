@@ -1,0 +1,103 @@
+{
+  "NAV": {
+    "HOME": "Inicio",
+    "ABOUT": "Sobre mí",
+    "EDUCATION": "Educación",
+    "CERTIFICATIONS": "Certificaciones",
+    "PROJECTS": "Proyectos",
+    "EXPERIENCE": "Experiencia",
+    "SKILLS": "Habilidades"
+  },
+  "HOME": {
+    "SUBTITLE": "Ingeniería en Computación"
+  },
+  "ABOUT": {
+    "TITLE": "Sobre Mí",
+    "TEXT": "Soy un ingeniero de software costarricense apasionado por el desarrollo web, la ciberseguridad y los datos. Impulsado por la curiosidad y el deseo constante de aprender, ya sea mejorando mis habilidades de programación o construyendo sistemas más seguros y resilientes."
+  },
+  "EDUCATION": {
+    "TITLE": "Educación",
+    "SUBTITLE": "Formación académica que ha moldeado mi base técnica.",
+    "NETWORK_TECH": {
+      "FEAT": "Técnico en Redes",
+      "DESCRIPTION": [
+        "Diseño y configuración de infraestructura de redes",
+        "Protocolos TCP/IP y principios de arquitectura de redes",
+        "Tecnologías LAN/WAN y diseño de topología de red",
+        "Configuración de routers y switches (Cisco)",
+        "Diagnóstico de redes con herramientas como Wireshark, ping y traceroute",
+        "Fundamentos de seguridad en redes y mitigación de amenazas",
+        "Documentación y creación de diagramas de red"
+      ]
+    },
+    "COMPUTER_ENG": {
+      "FEAT": "Ingeniería en Computación",
+      "DESCRIPTION": [
+        "Diseño de arquitectura de sistemas",
+        "Soluciones de computación en la nube",
+        "Desarrollo backend con microservicios y diseño de APIs",
+        "Diseño, optimización y gestión de bases de datos",
+        "Desarrollo de algoritmos y resolución de problemas computacionales",
+        "Principios de ciberseguridad y prácticas de codificación segura",
+        "Documentación técnica y especificaciones de sistemas",
+        "Gestión de proyectos y colaboración en equipos multidisciplinarios",
+        "Investigación e implementación de tecnologías emergentes"
+      ]
+    }
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certificaciones",
+    "SUBTITLE": "Certificaciones profesionales y credenciales que he obtenido."
+  },
+  "EXPERIENCE": {
+    "TITLE": "Mi Experiencia Laboral",
+    "SUBTITLE": "Algunas de las experiencias que han contribuido a mi desarrollo."
+  },
+  "PROJECTS": {
+    "TITLE": "Mis Proyectos",
+    "SUBTITLE": "Algunos de los proyectos en los que he trabajado.",
+    "GAME_HUB": {
+      "DESCRIPTION": "Aplicación React construida con TypeScript, Vite, Firebase y la API de RAWG para explorar datos de videojuegos y practicar conceptos esenciales de React."
+    },
+    "TECNO_TANKS": {
+      "DESCRIPTION": "Juego moderno en Python/Pygame inspirado en Battle City (1990). Implementa gestión de procesos, sincronización de hilos, comunicación entre hilos y control de recursos en tiempo real en una arquitectura cliente-servidor."
+    },
+    "DB_VISUALIZER": {
+      "DESCRIPTION": "Aplicación web para conectarse dinámicamente a distintos motores de bases de datos relacionales y visualizar su esquema."
+    },
+    "CHRISTMAS_COMPILER": {
+      "DESCRIPTION": "Compilador académico en Java que implementa análisis léxico, sintáctico y semántico usando JFLEX y Java CUP, incluyendo manejo de tabla de símbolos y validación semántica."
+    },
+    "MINI_SNS": {
+      "DESCRIPTION": "Red social simple para practicar el desarrollo full-stack. Implementa autenticación de usuarios, creación de publicaciones, gestión de amigos, comentarios y likes."
+    }
+  },
+  "SKILLS": {
+    "TITLE": "Habilidades",
+    "SUBTITLE": "Combino competencias técnicas y habilidades interpersonales para construir software de alto impacto.",
+    "COLLABORATION": {
+      "TITLE": "Colaboración Efectiva",
+      "DESC": "He trabajado de manera fluida en equipos multidisciplinarios, fomentando un ambiente positivo y asegurando que los objetivos del proyecto se cumplan mediante una comunicación clara y constante."
+    },
+    "PROBLEM_SOLVING": {
+      "TITLE": "Resolución Adaptativa de Problemas",
+      "DESC": "He abordado con éxito desafíos técnicos complejos descomponiéndolos en tareas manejables y encontrando soluciones creativas y eficientes bajo presión."
+    },
+    "LEARNING": {
+      "TITLE": "Aprendizaje Continuo",
+      "DESC": "He demostrado un fuerte compromiso con el crecimiento profesional al dominar rápidamente nuevas tecnologías y mantenerme actualizado con las últimas tendencias del sector."
+    },
+    "TIME_MANAGEMENT": {
+      "TITLE": "Gestión del Tiempo",
+      "DESC": "He entregado consistentemente resultados de alta calidad dentro de plazos ajustados, priorizando tareas eficazmente y gestionando mi flujo de trabajo con precisión."
+    },
+    "COMMUNICATION": {
+      "TITLE": "Comunicación Empática",
+      "DESC": "He traducido el lenguaje técnico en información clara y accionable para stakeholders no técnicos, asegurando que todos estuvieran alineados con la visión del proyecto."
+    },
+    "CRITICAL_THINKING": {
+      "TITLE": "Pensamiento Crítico",
+      "DESC": "Analicé los requisitos del proyecto desde múltiples perspectivas para identificar riesgos potenciales temprano e implementar mejoras proactivas en el proceso de desarrollo."
+    }
+  }
+}

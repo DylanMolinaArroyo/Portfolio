@@ -23,11 +23,16 @@
         <li>
           <button class="btn-nav" (click)="scrollToSection(item.section); closeMenu()">
             <img [src]="item.icon" class="ui-icon" alt="" />
-            <span>{{ item.label }}</span>
+            <span>{{ item.label | translate }}</span>
           </button>
         </li>
       }
     </ul>
+
+    <!-- Language toggle -->
+    <button class="btn-lang" (click)="toggleLang()" [attr.aria-label]="'Switch language to ' + (currentLang === 'en' ? 'ES' : 'EN')">
+      {{ currentLang === 'en' ? 'ES' : 'EN' }}
+    </button>
 
     <!-- Social links -->
     <ul class="sns-bar">

@@ -1,5 +1,6 @@
 import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface TechnologyItem {
   icon: string;
@@ -13,7 +14,7 @@ export interface Skill {
 
 @Component({
   selector: 'app-skills',
-  imports: [ScrollAnimateDirective, ],
+  imports: [ScrollAnimateDirective, TranslatePipe],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })
@@ -38,36 +39,12 @@ export class Skills implements OnInit {
     ];
 
     this.skills = [
-      {
-        title: 'Effective Collaboration',
-        description:
-          'I have worked seamlessly within multidisciplinary teams, fostering a positive environment and ensuring project goals were met through clear, constant communication.',
-      },
-      {
-        title: 'Adaptive Problem Solving',
-        description:
-          'I successfully tackled complex technical challenges by breaking them down into manageable tasks and finding creative, efficient solutions under pressure.',
-      },
-      {
-        title: 'Continuous Learning',
-        description:
-          'I have demonstrated a strong commitment to professional growth by quickly mastering new technologies and staying updated with the latest industry trends.',
-      },
-      {
-        title: 'Time Management',
-        description:
-          'I consistently delivered high-quality results within tight deadlines by effectively prioritizing tasks and managing my workflow with precision.',
-      },
-      {
-        title: 'Empathetic Communication',
-        description:
-          'I have translated technical jargon into clear, actionable insights for non-technical stakeholders, ensuring everyone stayed aligned on the project vision.',
-      },
-      {
-        title: 'Critical Thinking',
-        description:
-          'I analyzed project requirements from multiple perspectives to identify potential risks early and implement proactive improvements to the development process.',
-      },
+      { title: 'SKILLS.COLLABORATION.TITLE', description: 'SKILLS.COLLABORATION.DESC' },
+      { title: 'SKILLS.PROBLEM_SOLVING.TITLE', description: 'SKILLS.PROBLEM_SOLVING.DESC' },
+      { title: 'SKILLS.LEARNING.TITLE', description: 'SKILLS.LEARNING.DESC' },
+      { title: 'SKILLS.TIME_MANAGEMENT.TITLE', description: 'SKILLS.TIME_MANAGEMENT.DESC' },
+      { title: 'SKILLS.COMMUNICATION.TITLE', description: 'SKILLS.COMMUNICATION.DESC' },
+      { title: 'SKILLS.CRITICAL_THINKING.TITLE', description: 'SKILLS.CRITICAL_THINKING.DESC' },
     ];
   }
 }
