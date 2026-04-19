@@ -5,13 +5,14 @@ import { Navbar } from './shared/navbar/navbar';
 import { Home } from './sections/home/home';
 import { About } from './sections/about/about';
 import { Education } from './sections/education/education';
+import { Certifications } from './sections/certifications/certifications';
 import { Experience } from './sections/experience/experience';
 import { Projects } from './sections/projects/projects';
 import { Skills } from './sections/skills/skills';
 
 @Component({
   selector: 'app-root',
-  imports: [Home, Navbar, About, Education, Experience, Projects, Skills],
+  imports: [Home, Navbar, About, Education, Certifications, Experience, Projects, Skills],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

@@ -28,6 +28,11 @@ export class Navbar implements OnInit {
       { label: 'Home', icon: 'assets/icons/ui/house.svg', section: 'home' },
       { label: 'About', icon: 'assets/icons/ui/user.svg', section: 'about' },
       { label: 'Education', icon: 'assets/icons/ui/graduation-cap.svg', section: 'education' },
+      {
+        label: 'Certifications',
+        icon: 'assets/icons/ui/badge-check.svg',
+        section: 'certifications',
+      },
       { label: 'Projects', icon: 'assets/icons/ui/palette.svg', section: 'projects' },
       { label: 'Experience', icon: 'assets/icons/ui/briefcase.svg', section: 'experience' },
       { label: 'Skills', icon: 'assets/icons/ui/code.svg', section: 'skills' },

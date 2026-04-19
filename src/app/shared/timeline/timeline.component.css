@@ -1,0 +1,220 @@
+/* ── THEME TOKENS ────────────────────────────────────────── */
+.tl-dark {
+  --tl-accent:     var(--title-color-dark);
+  --tl-card-bg:    var(--card-background-dark);
+  --tl-card-hover: #323238;
+  --tl-dot-bg:     var(--background-color-dark);
+  --tl-title:      var(--title-color-dark);
+  --tl-subtitle:   #e0dde4;
+  --tl-text:       var(--text-color-dark);
+  --tl-border:     rgba(255, 255, 255, 0.05);
+}
+
+.tl-light {
+  --tl-accent:     var(--title-color-light);
+  --tl-card-bg:    var(--card-background-light);
+  --tl-card-hover: #e2e5ec;
+  --tl-dot-bg:     var(--background-color-light);
+  --tl-title:      var(--title-color-light);
+  --tl-subtitle:   var(--text-color-light);
+  --tl-text:       var(--text-color-light);
+  --tl-border:     rgba(0, 0, 0, 0.06);
+}
+
+/* ── WRAPPER ─────────────────────────────────────────────── */
+.tl-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0.5rem 0 1rem;
+}
+
+/* ── GRADIENT THREAD ─────────────────────────────────────── */
+/* Both sides are flex:1 so the node center lands exactly at 50% */
+.tl-thread {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1rem;
+  bottom: 1rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--tl-accent),
+    color-mix(in srgb, var(--tl-accent) 25%, transparent) 70%,
+    transparent
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── ITEMS ───────────────────────────────────────────────── */
+.tl-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── ROW ─────────────────────────────────────────────────── */
+.tl-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* ── YEAR COLUMN (default: left, text right-aligned) ─────── */
+.tl-year-col {
+  flex: 1;
+  padding-top: 0.9rem;
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.tl-year {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--tl-text);
+  opacity: 0.65;
+}
+
+/* ── NODE ────────────────────────────────────────────────── */
+.tl-node {
+  width: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.9rem;
+}
+
+.tl-dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--tl-dot-bg);
+  border: 3px solid var(--tl-accent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--tl-accent) 45%, transparent);
+  flex-shrink: 0;
+  z-index: 2;
+  transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.tl-row:hover .tl-dot {
+  box-shadow: 0 0 22px color-mix(in srgb, var(--tl-accent) 70%, transparent);
+  transform: scale(1.2);
+}
+
+/* ── CARD COLUMN (default: right) ────────────────────────── */
+.tl-card-col {
+  flex: 1;
+  padding-left: 1.5rem;
+}
+
+/* ── FLIPPED ROW: card left, year right ──────────────────── */
+.tl-flip .tl-year-col {
+  order: 3;
+  text-align: left;
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+
+.tl-flip .tl-node  { order: 2; }
+
+.tl-flip .tl-card-col {
+  order: 1;
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+/* ── CARD ────────────────────────────────────────────────── */
+.tl-card {
+  background: var(--tl-card-bg);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: background 0.2s ease;
+}
+
+.tl-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--tl-border);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.tl-card:hover { background: var(--tl-card-hover); }
+
+/* ── CARD CONTENT ────────────────────────────────────────── */
+.tl-year-badge {
+  display: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--tl-accent);
+  margin-bottom: 0.4rem;
+}
+
+.tl-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--tl-title);
+  margin-bottom: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+/* Slide direction matches card side */
+.tl-row:not(.tl-flip) .tl-card:hover .tl-title { transform: translateX(6px); }
+.tl-flip .tl-card:hover .tl-title               { transform: translateX(-6px); }
+
+.tl-subtitle {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--tl-subtitle);
+  margin-bottom: 0.85rem;
+}
+
+.tl-desc {
+  padding-left: 1.25rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--tl-text);
+}
+
+/* ── MOBILE ──────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .tl-thread {
+    left: 0.75rem;
+    transform: none;
+    top: 0;
+    bottom: 0;
+  }
+
+  .tl-year-col { display: none; }
+  .tl-year-badge { display: block; }
+
+  .tl-row,
+  .tl-flip {
+    padding-left: 2.5rem;
+    position: relative;
+  }
+
+  .tl-node,
+  .tl-flip .tl-node {
+    order: 1;
+    position: absolute;
+    left: 0;
+    padding-top: 1rem;
+    width: auto;
+  }
+
+  .tl-card-col,
+  .tl-flip .tl-card-col {
+    order: 2;
+    flex: 1;
+    padding: 0;
+    width: 100%;
+  }
+}

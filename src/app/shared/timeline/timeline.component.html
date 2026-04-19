@@ -1,0 +1,43 @@
+<div class="tl-wrapper" [class.tl-dark]="theme === 'dark'" [class.tl-light]="theme === 'light'">
+  <div class="tl-thread"></div>
+  <div class="tl-items">
+    @for (item of items; track $index; let i = $index) {
+      <div class="tl-row" [class.tl-flip]="i % 2 !== 0">
+
+        <!-- Year side -->
+        <div class="tl-year-col">
+          <span class="tl-year">{{ item.year }}</span>
+        </div>
+
+        <!-- Dot -->
+        <div class="tl-node">
+          <div class="tl-dot"></div>
+        </div>
+
+        <!-- Card side -->
+        <div class="tl-card-col">
+          <div class="tl-card">
+            <span class="tl-year-badge">{{ item.year }}</span>
+            <h3 class="tl-title">{{ item.title }}</h3>
+            <h4 class="tl-subtitle">{{ item.subtitle }}</h4>
+            @if (item.description.length) {
+              <ul class="tl-desc">
+                @for (d of item.description; track d) {
+                  <li>{{ d }}</li>
+                }
+              </ul>
+            }
+            @if (item.tags?.length) {
+              <div class="tags">
+                @for (t of item.tags!; track t) {
+                  <span class="tag">{{ t }}</span>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+      </div>
+    }
+  </div>
+</div>

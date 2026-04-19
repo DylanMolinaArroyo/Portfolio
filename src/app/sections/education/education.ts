@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
-import { CarouselComponent } from '../../shared/carousel/carousel.component';
+import { TimelineComponent, TimelineItem } from '../../shared/timeline/timeline.component';
 
 export interface EducationItem {
   feat: string;
@@ -11,12 +11,13 @@ export interface EducationItem {
 
 @Component({
   selector: 'app-education',
-  imports: [ScrollAnimateDirective, CarouselComponent],
+  imports: [ScrollAnimateDirective, TimelineComponent],
   templateUrl: './education.html',
   styleUrl: './education.css',
 })
 export class Education implements OnInit {
   items: EducationItem[] = [];
+  timelineItems: TimelineItem[] = [];
 
   ngOnInit() {
     this.items = [
@@ -51,5 +52,11 @@ export class Education implements OnInit {
         ],
       },
     ];
+    this.timelineItems = this.items.map(e => ({
+      title: e.feat,
+      subtitle: e.institution,
+      year: e.year,
+      description: e.description,
+    }));
   }
 }

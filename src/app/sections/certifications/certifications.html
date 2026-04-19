@@ -1,0 +1,32 @@
+<section id="certifications" class="light-section">
+  <div class="column content">
+    <div class="text-section" scrollAnimate>
+      <h2 class="responsive-title section-title-light">Certifications</h2>
+      <p class="responsive-text section-text-light">
+        Professional certifications and credentials I have earned.
+      </p>
+    </div>
+    <app-carousel scrollAnimate [animateDelay]="150" [items]="items" [autoplayInterval]="5000">
+      <ng-template let-cert>
+        <div class="card light-card">
+          <div class="card-content">
+            <div class="card-header">
+              <div>
+                <div class="card-title">{{ cert.title }}</div>
+                <div class="card-subtitle">{{ cert.issuer }}</div>
+              </div>
+              <span class="card-year">{{ cert.year }}</span>
+            </div>
+            <div class="card-text">
+              <ul>
+                @for (desc of cert.description; track desc) {
+                  <li>{{ desc }}</li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </app-carousel>
+  </div>
+</section>

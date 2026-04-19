@@ -7,6 +7,7 @@
   width: 1.2rem;
   height: 1.2rem;
   filter: brightness(0) invert(1);
+  transition: filter 0.35s ease;
 }
 
 .location-link {
@@ -65,10 +66,13 @@
   transform: translateX(0);
 }
 
-.cr-link:hover,
-.cr-link:hover .location-link .location-icon {
+.cr-link:hover {
   color: black;
   font-weight: bold;
+}
+
+.cr-link:hover .location-icon {
+  filter: brightness(0);
 }
 
 .location-icon,

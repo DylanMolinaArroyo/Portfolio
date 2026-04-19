@@ -6,32 +6,6 @@
         Some of the learning experiences that have contributed to my development.
       </p>
     </div>
-    <app-carousel scrollAnimate [animateDelay]="150" [items]="experiences" [autoplayInterval]="5000">
-      <ng-template let-experience>
-        <div class="card dark-card">
-          <div class="card-content">
-            <div class="card-header">
-              <div>
-                <div class="card-title">{{ experience.role }}</div>
-                <div class="card-subtitle">{{ experience.company }}</div>
-              </div>
-              <span class="card-year">{{ experience.year }}</span>
-            </div>
-            <div class="card-text">
-              <ul>
-                @for (desc of experience.description; track desc) {
-                  <li>{{ desc }}</li>
-                }
-              </ul>
-            </div>
-            <div class="tags">
-              @for (tag of experience.tags; track tag) {
-                <span class="tag">{{ tag }}</span>
-              }
-            </div>
-          </div>
-        </div>
-      </ng-template>
-    </app-carousel>
+    <app-timeline scrollAnimate [animateDelay]="150" [items]="timelineItems" theme="dark" />
   </div>
 </section>

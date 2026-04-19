@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScrollAnimateDirective } from '../../shared/scroll-animate.directive';
-import { CarouselComponent } from '../../shared/carousel/carousel.component';
+import { TimelineComponent, TimelineItem } from '../../shared/timeline/timeline.component';
 
 export interface ExperienceItem {
   role: string;
@@ -12,12 +12,13 @@ export interface ExperienceItem {
 
 @Component({
   selector: 'app-experience',
-  imports: [ScrollAnimateDirective, CarouselComponent],
+  imports: [ScrollAnimateDirective, TimelineComponent],
   templateUrl: './experience.html',
   styleUrl: './experience.css',
 })
 export class Experience implements OnInit {
   experiences: ExperienceItem[] = [];
+  timelineItems: TimelineItem[] = [];
 
   ngOnInit() {
     this.experiences = [
@@ -32,5 +33,12 @@ export class Experience implements OnInit {
         tags: ['React', 'TypeScript', 'GraphQL'],
       },
     ];
+    this.timelineItems = this.experiences.map(e => ({
+      title: e.role,
+      subtitle: e.company,
+      year: e.year,
+      description: e.description,
+      tags: e.tags,
+    }));
   }
 }
