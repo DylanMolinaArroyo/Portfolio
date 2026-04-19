@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-import { Navbar } from './components/navbar/navbar';
+import { Navbar } from './shared/navbar/navbar';
 import { Home } from './sections/home/home';
 import { About } from './sections/about/about';
 import { Education } from './sections/education/education';

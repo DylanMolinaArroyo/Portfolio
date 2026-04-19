@@ -20,8 +20,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  /* Teal from the portfolio palette — visible on both dark and light section backgrounds */
-  background: rgba(88, 164, 176, 0.2);
+  background: var(--neutral-color);
   animation: animate 19s linear infinite;
 }
 
@@ -132,13 +131,49 @@
   animation-delay: 6s;
 }
 
+/* Mobile: only small cubes, fewer visible */
+@media (max-width: 479px) {
+  .page-background li {
+    background: rgba(124, 126, 131, 0.12);
+  }
+  .page-background li:nth-child(n + 6) {
+    display: none;
+  }
+  .page-background li:nth-child(3),
+  .page-background li:nth-child(5) {
+    display: none;
+  }
+}
+
+/* Small tablet: reduce opacity and hide largest cubes */
+@media (min-width: 480px) and (max-width: 767px) {
+  .page-background li {
+    background: rgba(124, 126, 131, 0.15);
+  }
+  .page-background li:nth-child(5),
+  .page-background li:nth-child(9),
+  .page-background li:nth-child(12) {
+    display: none;
+  }
+}
+
+/* Tablet: slightly reduced */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-background li {
+    background: rgba(124, 126, 131, 0.17);
+  }
+  .page-background li:nth-child(5),
+  .page-background li:nth-child(9) {
+    display: none;
+  }
+}
+
 /* Section background colors sit below the cubes (no z-index = auto, below z-index: 1) */
 .dark-section {
   background-color: var(--background-color-dark);
 }
-
 .light-section {
-  background-color: var(--background-color-light);
+  background-color: var(--background-color-dark);
 }
 
 /*
@@ -150,6 +185,13 @@
 .content {
   position: relative;
   z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-background li {
+    animation: none;
+    opacity: 0;
+  }
 }
 
 @keyframes animate {

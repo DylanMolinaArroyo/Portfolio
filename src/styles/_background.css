@@ -28,7 +28,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: rgba(88, 164, 176, 0.2);
+  background: rgba(124, 126, 131, 0.2);
   animation: cubeFloat 19s linear infinite;
 }
 

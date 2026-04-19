@@ -1,9 +1,13 @@
 @font-face {
   font-family: 'Roboto';
   src: url('../assets/fonts/Roboto-VariableFont_wdth,wght.ttf');
+  font-display: swap;
 }
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   font-family: 'Roboto', 'arial', sans-serif;
   margin: 0;
 }
@@ -19,11 +23,13 @@
   --text-color-light: #373f51;
 
   --title-color-dark: #58a4b0;
-  --title-color-light: #58a4b0;
+  --title-color-light: #1f6370;
 
-  --title-color-complementary-dark: #b06458;
-  --title-color-complementary-light: #b06458;
+  --title-color-complementary-dark: #c97a6e;
+  --title-color-complementary-light: #8b3d32;
 
   --card-background-dark: #2a2a2e;
   --card-background-light: #eef0f5;
+
+  --neutral-color: #7c7e83;
 }
