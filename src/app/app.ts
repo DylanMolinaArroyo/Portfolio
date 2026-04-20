@@ -10,7 +10,7 @@ import { Experience } from './sections/experience/experience';
 import { Projects } from './sections/projects/projects';
 import { Skills } from './sections/skills/skills';
 
-import { TranslateService, TranslatePipe, TranslateDirective } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import translationsEN from '../../public/i18n/en.json';
 
 @Component({
@@ -20,7 +20,7 @@ import translationsEN from '../../public/i18n/en.json';
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('DylanMA-Portfolio');
+  protected readonly title = signal('DylanMolina');
   private translate = inject(TranslateService);
 
   constructor(private titleService: Title) {
