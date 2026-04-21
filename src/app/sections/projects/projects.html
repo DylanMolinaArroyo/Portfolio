@@ -1,25 +1,23 @@
-<section id="projects" class="light-section">
+<section id="projects" class="dark-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-light">{{ 'PROJECTS.TITLE' | translate }}</h2>
-      <p class="responsive-text section-text-light">{{ 'PROJECTS.SUBTITLE' | translate }}</p>
+      <h2 class="responsive-title section-title-dark">{{ 'PROJECTS.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-dark">{{ 'PROJECTS.SUBTITLE' | translate }}</p>
     </div>
     <app-carousel scrollAnimate [animateDelay]="150" [items]="projects" [autoplayInterval]="5000">
       <ng-template let-project>
-        <div class="card light-card project-card">
-          <div class="project-image-container">
-            <picture>
-              <source [srcset]="getWebpSrc(project.image)" type="image/webp" />
-              <img [src]="project.image" [alt]="project.title" class="project-image" loading="lazy" />
-            </picture>
-            <div class="image-overlay"></div>
-            <span class="status-tag status-{{ getSeverity(project.status) }}">{{ project.status }}</span>
-          </div>
+        <div class="card dark-card project-card">
           <div class="card-content">
             <div class="project-header">
               <h3 class="card-title">{{ project.title }}</h3>
-              <a [href]="project.code" target="_blank" rel="noopener noreferrer" class="btn-code" aria-label="View code on GitHub">
-                <img src="assets/icons/ui/github.svg" class="ui-icon" alt="">
+              <a
+                [href]="project.code"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-code"
+                aria-label="View code on GitHub"
+              >
+                <img src="assets/icons/ui/github.svg" class="ui-icon" alt="" />
               </a>
             </div>
             <p class="card-text">{{ project.description | translate }}</p>

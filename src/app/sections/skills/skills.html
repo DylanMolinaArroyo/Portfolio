@@ -1,28 +1,40 @@
-<section id="skills" class="light-section">
+<section id="skills" class="dark-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-light">{{ 'SKILLS.TITLE' | translate }}</h2>
-      <p class="responsive-text section-text-light">{{ 'SKILLS.SUBTITLE' | translate }}</p>
+      <h2 class="responsive-title section-title-dark">{{ 'SKILLS.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-dark">{{ 'SKILLS.SUBTITLE' | translate }}</p>
     </div>
 
-    <div class="skills-grid">
-      @for (skill of skills; track skill.title; let i = $index) {
-        <div class="card light-card" scrollAnimate [animateDelay]="i * 80">
-          <div class="card-content">
-            <h3 class="card-title">{{ skill.title | translate }}</h3>
-            <p class="card-text">{{ skill.description | translate }}</p>
+    <!-- Technical Skills -->
+    <div class="skills-subsection" scrollAnimate [animateDelay]="100">
+      <h3 class="subsection-title section-subtitle-dark">{{ 'SKILLS.TECHNICAL' | translate }}</h3>
+      <div class="tech-groups">
+        @for (group of techGroups; track group.labelKey; let i = $index) {
+          <div class="tech-group" scrollAnimate [animateDelay]="i * 80">
+            <span class="tech-group-label">{{ group.labelKey | translate }}</span>
+            <div class="tech-stack">
+              @for (item of group.items; track item.name) {
+                <div class="tech-item">
+                  <img [src]="item.icon" [alt]="item.name" />
+                  <span class="tech-name">{{ item.name }}</span>
+                </div>
+              }
+            </div>
           </div>
-        </div>
-      }
+        }
+      </div>
     </div>
 
-    <div class="tech-stack">
-      @for (item of technologies; track item.name; let i = $index) {
-        <div class="tech-item" scrollAnimate [animateDelay]="i * 50">
-          <img [src]="item.icon" [alt]="item.name" />
-          <span class="tech-name">{{ item.name }}</span>
-        </div>
-      }
+    <!-- Soft Skills -->
+    <div class="skills-subsection" scrollAnimate [animateDelay]="200">
+      <h3 class="subsection-title section-subtitle-dark">{{ 'SKILLS.SOFT' | translate }}</h3>
+      <div class="soft-skills">
+        @for (skill of skills; track skill.title; let i = $index) {
+          <span class="soft-skill-badge" scrollAnimate [animateDelay]="i * 60">
+            {{ skill.title | translate }}
+          </span>
+        }
+      </div>
     </div>
   </div>
 </section>

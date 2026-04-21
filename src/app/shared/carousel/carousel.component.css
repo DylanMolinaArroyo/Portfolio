@@ -70,3 +70,17 @@
   height: 1rem;
   filter: brightness(0) saturate(100%) invert(58%) sepia(20%) saturate(600%) hue-rotate(155deg);
 }
+
+/* Light / complementary theme buttons */
+.carousel-light .carousel-btn {
+  border-color: rgba(201, 122, 110, 0.4);
+  background: rgba(201, 122, 110, 0.1);
+}
+
+.carousel-light .carousel-btn:hover {
+  background: rgba(201, 122, 110, 0.25);
+}
+
+.carousel-light .chevron-icon {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(30%) saturate(600%) hue-rotate(330deg);
+}

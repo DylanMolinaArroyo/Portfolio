@@ -144,3 +144,17 @@
     max-width: 450px;
   }
 }
+
+/* SNS buttons */
+.home-sns {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .home-sns {
+    justify-content: flex-start;
+  }
+}

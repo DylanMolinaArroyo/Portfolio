@@ -39,3 +39,34 @@
     gap: 0;
   }
 }
+
+/* Complementary-accented card */
+.cert-card {
+  background-color: var(--card-background-dark);
+  border-top: 3px solid var(--title-color-complementary-dark);
+}
+
+.cert-card .card-title {
+  color: var(--title-color-complementary-dark);
+}
+
+.cert-card .card-subtitle {
+  color: var(--text-color-dark);
+  opacity: 0.75;
+}
+
+.cert-card .card-text {
+  color: var(--text-color-dark);
+}
+
+.cert-card .card-year {
+  background: rgba(201, 122, 110, 0.18);
+  color: var(--title-color-complementary-dark);
+}
+
+.cert-card:hover {
+  border-top: 3px solid var(--title-color-complementary-dark);
+  border-left: 1px solid rgba(201, 122, 110, 0.4);
+  border-right: 1px solid rgba(201, 122, 110, 0.4);
+  border-bottom: 1px solid rgba(201, 122, 110, 0.4);
+}

@@ -22,7 +22,7 @@
   color: var(--title-color-dark);
 }
 .section-title-light {
-  color: var(--title-color-light);
+  color: var(--title-color-complementary-light);
 }
 .section-text-dark {
   color: var(--text-color-dark);
@@ -31,7 +31,7 @@
   color: var(--text-color-light);
 }
 .section-subtitle-dark {
-  color: var(--text-color-dark);
+  color: var(--title-color-complementary-dark);
 }
 
 /* TABLET (768px - 1023px) */
@@ -93,4 +93,8 @@
     font-size: 1.25rem;
     max-width: 75ch;
   }
+}
+
+.section-subtitle-light {
+  color: var(--title-color-complementary-light);
 }

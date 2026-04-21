@@ -21,6 +21,7 @@ import { NgTemplateOutlet, isPlatformBrowser } from '@angular/common';
 })
 export class CarouselComponent<T> implements OnInit, OnDestroy {
   @Input() items: T[] = [];
+  @Input() theme: 'dark' | 'light' = 'dark';
   @Input() autoplayInterval = 0;
 
   @ContentChild(TemplateRef) itemTemplate!: TemplateRef<{ $implicit: T }>;

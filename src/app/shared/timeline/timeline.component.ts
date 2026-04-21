@@ -16,5 +16,5 @@ export interface TimelineItem {
 })
 export class TimelineComponent {
   @Input() items: TimelineItem[] = [];
-  @Input() theme: 'dark' | 'light' = 'dark';
+  @Input() theme: 'dark' | 'light' | 'complementary' = 'dark';
 }

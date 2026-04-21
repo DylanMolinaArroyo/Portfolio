@@ -54,8 +54,8 @@
   color: var(--text-color-dark);
 }
 .dark-card .card-year {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text-color-dark);
+  background: rgba(176, 100, 88, 0.15);
+  color: var(--title-color-complementary-dark);
 }
 .dark-card:hover {
   border: 1px solid var(--title-color-dark);
@@ -66,7 +66,7 @@
   background-color: var(--card-background-light);
 }
 .light-card .card-title {
-  color: var(--title-color-light);
+  color: var(--title-color-complementary-light);
 }
 .light-card .card-subtitle {
   color: var(--title-color-complementary-light);
@@ -75,11 +75,11 @@
   color: var(--text-color-light);
 }
 .light-card .card-year {
-  background: rgba(0, 0, 0, 0.06);
-  color: var(--text-color-light);
+  background: rgba(176, 100, 88, 0.12);
+  color: var(--title-color-complementary-light);
 }
 .light-card:hover {
-  border: 1px solid var(--title-color-light);
+  border: 1px solid var(--title-color-complementary-light);
 }
 
 /* Tags */
@@ -93,7 +93,15 @@
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 20px;
+  background: rgba(201, 122, 110, 0.15);
+  border: 1px solid rgba(201, 122, 110, 0.5);
+  color: var(--title-color-complementary-light);
+}
+
+/* Tags adapt to card theme */
+.dark-card .tag,
+.tl-dark .tag {
   background: rgba(88, 164, 176, 0.15);
-  border: 1px solid rgba(88, 164, 176, 0.6);
-  color: #58a4b0;
+  border-color: rgba(88, 164, 176, 0.6);
+  color: var(--title-color-dark);
 }

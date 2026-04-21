@@ -21,6 +21,18 @@
   --tl-border:     rgba(0, 0, 0, 0.06);
 }
 
+/* ── COMPLEMENTARY THEME (terracotta accent on light bg) ─── */
+.tl-complementary {
+  --tl-accent:     var(--title-color-complementary-light);
+  --tl-card-bg:    var(--card-background-light);
+  --tl-card-hover: #e8dedd;
+  --tl-dot-bg:     var(--background-color-light);
+  --tl-title:      var(--title-color-complementary-light);
+  --tl-subtitle:   var(--text-color-light);
+  --tl-text:       var(--text-color-light);
+  --tl-border:     rgba(139, 61, 50, 0.1);
+}
+
 /* ── WRAPPER ─────────────────────────────────────────────── */
 .tl-wrapper {
   position: relative;

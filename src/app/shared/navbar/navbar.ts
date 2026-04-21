@@ -1,4 +1,4 @@
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -16,11 +16,14 @@ export interface NavItem {
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar implements OnInit {
+export class Navbar implements OnInit, OnDestroy {
   navItems: NavItem[] = [];
   menuOpen = false;
   hasShadow = false;
   currentLang = 'en';
+  activeSection = 'home';
+
+  private sectionObserver?: IntersectionObserver;
 
   constructor(
     private router: Router,
@@ -29,18 +32,47 @@ export class Navbar implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.setupScrollSpy();
+    this.setupRouterScrollSpy();
     this.initLang();
 
     this.navItems = [
-      { label: 'NAV.HOME',           icon: 'assets/icons/ui/house.svg',          section: 'home' },
-      { label: 'NAV.ABOUT',          icon: 'assets/icons/ui/user.svg',            section: 'about' },
-      { label: 'NAV.EDUCATION',      icon: 'assets/icons/ui/graduation-cap.svg',  section: 'education' },
-      { label: 'NAV.CERTIFICATIONS', icon: 'assets/icons/ui/badge-check.svg',     section: 'certifications' },
-      { label: 'NAV.PROJECTS',       icon: 'assets/icons/ui/palette.svg',         section: 'projects' },
-      { label: 'NAV.EXPERIENCE',     icon: 'assets/icons/ui/briefcase.svg',       section: 'experience' },
-      { label: 'NAV.SKILLS',         icon: 'assets/icons/ui/code.svg',            section: 'skills' },
+      { label: 'NAV.HOME', icon: 'assets/icons/ui/house.svg', section: 'home' },
+      { label: 'NAV.ABOUT', icon: 'assets/icons/ui/user.svg', section: 'about' },
+      { label: 'NAV.EDUCATION', icon: 'assets/icons/ui/graduation-cap.svg', section: 'education' },
+      {
+        label: 'NAV.CERTIFICATIONS',
+        icon: 'assets/icons/ui/badge-check.svg',
+        section: 'certifications',
+      },
+      { label: 'NAV.PROJECTS', icon: 'assets/icons/ui/palette.svg', section: 'projects' },
+      { label: 'NAV.EXPERIENCE', icon: 'assets/icons/ui/briefcase.svg', section: 'experience' },
+      { label: 'NAV.SKILLS', icon: 'assets/icons/ui/code.svg', section: 'skills' },
     ];
+
+    if (isPlatformBrowser(this.platformId)) {
+      setTimeout(() => this.setupSectionObserver(), 200);
+    }
+  }
+
+  ngOnDestroy() {
+    this.sectionObserver?.disconnect();
+  }
+
+  private setupSectionObserver(): void {
+    this.sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            this.activeSection = entry.target.id;
+          }
+        });
+      },
+      { rootMargin: '-40% 0px -40% 0px', threshold: 0 },
+    );
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+      this.sectionObserver?.observe(section);
+    });
   }
 
   toggleLang(): void {
@@ -55,8 +87,7 @@ export class Navbar implements OnInit {
   private initLang(): void {
     let lang = 'en';
     if (isPlatformBrowser(this.platformId)) {
-      lang = localStorage.getItem('lang')
-        ?? (navigator.language.startsWith('es') ? 'es' : 'en');
+      lang = localStorage.getItem('lang') ?? (navigator.language.startsWith('es') ? 'es' : 'en');
     }
     this.currentLang = lang;
     this.translate.use(lang);
@@ -89,7 +120,7 @@ export class Navbar implements OnInit {
     }
   }
 
-  private setupScrollSpy(): void {
+  private setupRouterScrollSpy(): void {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {

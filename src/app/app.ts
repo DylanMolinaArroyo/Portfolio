@@ -9,13 +9,14 @@ import { Certifications } from './sections/certifications/certifications';
 import { Experience } from './sections/experience/experience';
 import { Projects } from './sections/projects/projects';
 import { Skills } from './sections/skills/skills';
+import { Footer } from './shared/footer/footer';
 
 import { TranslateService } from '@ngx-translate/core';
 import translationsEN from '../../public/i18n/en.json';
 
 @Component({
   selector: 'app-root',
-  imports: [Home, Navbar, About, Education, Certifications, Experience, Projects, Skills],
+  imports: [Home, Navbar, About, Education, Certifications, Experience, Projects, Skills, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

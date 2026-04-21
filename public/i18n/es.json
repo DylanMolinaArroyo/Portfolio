@@ -9,7 +9,7 @@
     "SKILLS": "Habilidades"
   },
   "HOME": {
-    "SUBTITLE": "Ingeniería en Computación"
+    "SUBTITLE": "Ingeniero de Software"
   },
   "ABOUT": {
     "TITLE": "Sobre Mí",
@@ -47,11 +47,70 @@
   },
   "CERTIFICATIONS": {
     "TITLE": "Certificaciones",
-    "SUBTITLE": "Certificaciones profesionales y credenciales que he obtenido."
+    "SUBTITLE": "Certificaciones profesionales y credenciales que he obtenido.",
+    "ITEMS": [
+      {
+        "TITLE": "Fundamentos de Servicios Web",
+        "ISSUER": "IBM",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Conceptos clave de servicios web, APIs, REST y arquitecturas SOA."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Ingeniería de Datos",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Pipelines de datos, Snowpipe, Streams y Tasks en Snowflake."]
+      },
+      {
+        "TITLE": "Comenzar con la Arquitectura Lakehouse en Databricks",
+        "ISSUER": "Databricks",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Fundamentos de Lakehouse, Delta Lake y análisis unificado en Databricks."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Aplicaciones de Datos",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": [
+          "Construcción de aplicaciones e integraciones de datos con la plataforma Snowflake."
+        ]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Colaboración y Marketplace",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": [
+          "Uso compartido de datos, funciones de colaboración y el Snowflake Data Marketplace."
+        ]
+      }
+    ]
   },
   "EXPERIENCE": {
     "TITLE": "Mi Experiencia Laboral",
-    "SUBTITLE": "Algunas de las experiencias que han contribuido a mi desarrollo."
+    "SUBTITLE": "Algunas de las experiencias que han contribuido a mi desarrollo.",
+    "ITEMS": [
+      {
+        "ROLE": "Miembro del Comité Organizador – CONESCAPAN 2026",
+        "COMPANY": "IEEE",
+        "YEAR": "Feb 2026 – Presente",
+        "DESCRIPTION": [
+          "Establecer contacto directo con empresas estratégicas para el CONESCAPAN XLIII.",
+          "Coordinar reuniones entre representantes de empresas y el equipo organizador.",
+          "Garantizar una comunicación fluida y una experiencia positiva para patrocinadores y participantes."
+        ],
+        "TAGS": ["IEEE", "Organización de Eventos", "Patrocinio"]
+      },
+      {
+        "ROLE": "Asistente de Investigación (Pasante)",
+        "COMPANY": "Tecnológico de Costa Rica",
+        "YEAR": "Sep – Dic 2022",
+        "DESCRIPTION": [
+          "Apoyo a actividades de investigación en el campus de Alajuela del TEC.",
+          "Colaboración con personal académico en tareas de recopilación y análisis de datos."
+        ],
+        "TAGS": ["Investigación", "TEC", "Pasantía"]
+      }
+    ]
   },
   "PROJECTS": {
     "TITLE": "Mis Proyectos",
@@ -74,7 +133,7 @@
   },
   "SKILLS": {
     "TITLE": "Habilidades",
-    "SUBTITLE": "Combino competencias técnicas y habilidades interpersonales para construir software de alto impacto.",
+    "SUBTITLE": "Integro competencias técnicas y fortalezas interpersonales para construir software de alto impacto.",
     "COLLABORATION": {
       "TITLE": "Colaboración Efectiva",
       "DESC": "He trabajado de manera fluida en equipos multidisciplinarios, fomentando un ambiente positivo y asegurando que los objetivos del proyecto se cumplan mediante una comunicación clara y constante."
@@ -98,6 +157,20 @@
     "CRITICAL_THINKING": {
       "TITLE": "Pensamiento Crítico",
       "DESC": "Analicé los requisitos del proyecto desde múltiples perspectivas para identificar riesgos potenciales temprano e implementar mejoras proactivas en el proceso de desarrollo."
+    },
+    "TECHNICAL": "Habilidades Técnicas",
+    "SOFT": "Habilidades Blandas",
+    "GROUPS": {
+      "LANGUAGES": "Lenguajes",
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend",
+      "DATABASES": "Bases de Datos",
+      "TOOLS": "Herramientas"
     }
+  },
+  "FOOTER": {
+    "TAGLINE": "Ingeniero de Software · Costa Rica",
+    "COPYRIGHT": "© {{ year }} Dylan Molina Arroyo. Todos los derechos reservados.",
+    "BUILT_WITH": "Desarrollado con Angular"
   }
 }

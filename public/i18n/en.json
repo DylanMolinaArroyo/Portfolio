@@ -9,7 +9,7 @@
     "SKILLS": "Skills"
   },
   "HOME": {
-    "SUBTITLE": "Computer Engineer"
+    "SUBTITLE": "Software Engineer"
   },
   "ABOUT": {
     "TITLE": "About Me",
@@ -47,11 +47,66 @@
   },
   "CERTIFICATIONS": {
     "TITLE": "Certifications",
-    "SUBTITLE": "Professional certifications and credentials I have earned."
+    "SUBTITLE": "Professional certifications and credentials I have earned.",
+    "ITEMS": [
+      {
+        "TITLE": "Fundamentals of Web Services",
+        "ISSUER": "IBM",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Core concepts of web services, APIs, REST, and SOA architectures."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Data Engineering",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Data pipelines, Snowpipe, Streams, and Tasks in Snowflake."]
+      },
+      {
+        "TITLE": "Get Started with Lakehouse Architecture on Databricks",
+        "ISSUER": "Databricks",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Lakehouse fundamentals, Delta Lake, and unified analytics on Databricks."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Data Applications",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Building data applications and integrations using Snowflake's platform."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Collaboration & Marketplace",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Data sharing, collaboration features, and the Snowflake Data Marketplace."]
+      }
+    ]
   },
   "EXPERIENCE": {
     "TITLE": "My Work Experience",
-    "SUBTITLE": "Some of the experiences that have contributed to my development."
+    "SUBTITLE": "Some of the experiences that have contributed to my development.",
+    "ITEMS": [
+      {
+        "ROLE": "Member of the Organizing Committee – CONESCAPAN 2026",
+        "COMPANY": "IEEE",
+        "YEAR": "Feb 2026 – Present",
+        "DESCRIPTION": [
+          "Establishing direct contact with strategic companies for CONESCAPAN XLIII.",
+          "Coordinating meetings between company representatives and the organizing team.",
+          "Ensuring smooth communication and a positive experience for sponsors and participants."
+        ],
+        "TAGS": ["IEEE", "Event Organization", "Sponsorship"]
+      },
+      {
+        "ROLE": "Research Assistant (Intern)",
+        "COMPANY": "Tecnológico de Costa Rica",
+        "YEAR": "Sep – Dec 2022",
+        "DESCRIPTION": [
+          "Supported ongoing research activities at TEC's Alajuela campus.",
+          "Collaborated with academic staff on data collection and analysis tasks."
+        ],
+        "TAGS": ["Research", "TEC", "Internship"]
+      }
+    ]
   },
   "PROJECTS": {
     "TITLE": "My Projects",
@@ -98,6 +153,20 @@
     "CRITICAL_THINKING": {
       "TITLE": "Critical Thinking",
       "DESC": "I analyzed project requirements from multiple perspectives to identify potential risks early and implement proactive improvements to the development process."
+    },
+    "TECHNICAL": "Technical Skills",
+    "SOFT": "Soft Skills",
+    "GROUPS": {
+      "LANGUAGES": "Languages",
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend",
+      "DATABASES": "Databases",
+      "TOOLS": "Tools"
     }
+  },
+  "FOOTER": {
+    "TAGLINE": "Software Engineer · Costa Rica",
+    "COPYRIGHT": "© {{ year }} Dylan Molina Arroyo. All rights reserved.",
+    "BUILT_WITH": "Built with Angular"
   }
 }

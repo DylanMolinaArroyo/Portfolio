@@ -1,9 +1,14 @@
-<section id="experience" class="dark-section">
+<section id="experience" class="light-section">
   <div class="column content">
     <div class="text-section" scrollAnimate>
-      <h2 class="responsive-title section-title-dark">{{ 'EXPERIENCE.TITLE' | translate }}</h2>
-      <p class="responsive-text section-text-dark">{{ 'EXPERIENCE.SUBTITLE' | translate }}</p>
+      <h2 class="responsive-title section-title-light">{{ 'EXPERIENCE.TITLE' | translate }}</h2>
+      <p class="responsive-text section-text-light">{{ 'EXPERIENCE.SUBTITLE' | translate }}</p>
     </div>
-    <app-timeline scrollAnimate [animateDelay]="150" [items]="timelineItems" theme="dark" />
+    <app-timeline
+      scrollAnimate
+      [animateDelay]="150"
+      [items]="timelineItems"
+      theme="complementary"
+    />
   </div>
 </section>

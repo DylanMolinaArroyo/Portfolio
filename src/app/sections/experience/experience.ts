@@ -4,14 +4,6 @@ import { TimelineComponent, TimelineItem } from '../../shared/timeline/timeline.
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-export interface ExperienceItem {
-  role: string;
-  company: string;
-  year: string;
-  description: string[];
-  tags: string[];
-}
-
 @Component({
   selector: 'app-experience',
   imports: [ScrollAnimateDirective, TimelineComponent, TranslatePipe],
@@ -19,21 +11,20 @@ export interface ExperienceItem {
   styleUrl: './experience.css',
 })
 export class Experience implements OnInit, OnDestroy {
-  experiences: ExperienceItem[] = [];
   timelineItems: TimelineItem[] = [];
   private sub?: Subscription;
 
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    this.sub = this.translate.stream('EXPERIENCE').subscribe(() => {
-      this.experiences = [];
-      this.timelineItems = this.experiences.map((e) => ({
-        title: e.role,
-        subtitle: e.company,
-        year: e.year,
-        description: e.description,
-        tags: e.tags,
+    this.sub = this.translate.stream('EXPERIENCE.ITEMS').subscribe((items: any[]) => {
+      if (!Array.isArray(items)) return;
+      this.timelineItems = items.map((e) => ({
+        title: e.ROLE,
+        subtitle: e.COMPANY,
+        year: e.YEAR,
+        description: e.DESCRIPTION,
+        tags: e.TAGS,
       }));
     });
   }
