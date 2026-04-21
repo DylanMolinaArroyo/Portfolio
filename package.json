@@ -1,5 +1,5 @@
 {
-  "name": "dylan-ma-portfolio",
+  "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:DylanMA-Portfolio": "node dist/DylanMA-Portfolio/server/server.mjs"
+    "serve:ssr:Portfolio": "node dist/Portfolio/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,

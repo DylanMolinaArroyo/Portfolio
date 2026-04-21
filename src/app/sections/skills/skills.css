@@ -127,3 +127,45 @@
     height: 50px;
   }
 }
+
+/* Language cards */
+.language-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.language-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 12px;
+  background: rgb(89, 165, 177, 0.1);
+  border: 1px solid rgb(89, 165, 177, 0.35);
+}
+
+.language-flag {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.language-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.language-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--title-color-dark);
+}
+
+.language-level {
+  font-size: 0.72rem;
+  color: var(--text-color-dark);
+  opacity: 0.75;
+}

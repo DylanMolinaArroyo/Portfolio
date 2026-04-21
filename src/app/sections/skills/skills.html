@@ -36,5 +36,23 @@
         }
       </div>
     </div>
+
+    <!-- Languages -->
+    <div class="skills-subsection" scrollAnimate [animateDelay]="300">
+      <h3 class="subsection-title section-subtitle-dark">
+        {{ 'SKILLS.SPOKEN_LANGUAGES' | translate }}
+      </h3>
+      <div class="language-list">
+        @for (lang of languages; track lang.nameKey; let i = $index) {
+          <div class="language-card" scrollAnimate [animateDelay]="i * 80">
+            <img [src]="lang.icon" [alt]="lang.nameKey" class="language-flag" />
+            <div class="language-info">
+              <span class="language-name">{{ lang.nameKey | translate }}</span>
+              <span class="language-level">{{ lang.levelKey | translate }}</span>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
   </div>
 </section>

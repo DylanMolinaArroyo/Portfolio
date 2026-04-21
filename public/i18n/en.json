@@ -53,31 +53,41 @@
         "TITLE": "Fundamentals of Web Services",
         "ISSUER": "IBM",
         "YEAR": "2024",
-        "DESCRIPTION": ["Core concepts of web services, APIs, REST, and SOA architectures."]
+        "DESCRIPTION": [
+          "Core concepts of web services, APIs, REST, and SOA architectures."
+        ]
       },
       {
         "TITLE": "Snowflake Hands On Essentials – Data Engineering",
         "ISSUER": "Snowflake",
         "YEAR": "2024",
-        "DESCRIPTION": ["Data pipelines, Snowpipe, Streams, and Tasks in Snowflake."]
+        "DESCRIPTION": [
+          "Data pipelines, Snowpipe, Streams, and Tasks in Snowflake."
+        ]
       },
       {
         "TITLE": "Get Started with Lakehouse Architecture on Databricks",
         "ISSUER": "Databricks",
         "YEAR": "2024",
-        "DESCRIPTION": ["Lakehouse fundamentals, Delta Lake, and unified analytics on Databricks."]
+        "DESCRIPTION": [
+          "Lakehouse fundamentals, Delta Lake, and unified analytics on Databricks."
+        ]
       },
       {
         "TITLE": "Snowflake Hands On Essentials – Data Applications",
         "ISSUER": "Snowflake",
         "YEAR": "2024",
-        "DESCRIPTION": ["Building data applications and integrations using Snowflake's platform."]
+        "DESCRIPTION": [
+          "Building data applications and integrations using Snowflake's platform."
+        ]
       },
       {
         "TITLE": "Snowflake Hands On Essentials – Collaboration & Marketplace",
         "ISSUER": "Snowflake",
         "YEAR": "2024",
-        "DESCRIPTION": ["Data sharing, collaboration features, and the Snowflake Data Marketplace."]
+        "DESCRIPTION": [
+          "Data sharing, collaboration features, and the Snowflake Data Marketplace."
+        ]
       }
     ]
   },
@@ -94,7 +104,11 @@
           "Coordinating meetings between company representatives and the organizing team.",
           "Ensuring smooth communication and a positive experience for sponsors and participants."
         ],
-        "TAGS": ["IEEE", "Event Organization", "Sponsorship"]
+        "TAGS": [
+          "IEEE",
+          "Event Organization",
+          "Sponsorship"
+        ]
       },
       {
         "ROLE": "Research Assistant (Intern)",
@@ -104,7 +118,11 @@
           "Supported ongoing research activities at TEC's Alajuela campus.",
           "Collaborated with academic staff on data collection and analysis tasks."
         ],
-        "TAGS": ["Research", "TEC", "Internship"]
+        "TAGS": [
+          "Research",
+          "TEC",
+          "Internship"
+        ]
       }
     ]
   },
@@ -162,6 +180,15 @@
       "BACKEND": "Backend",
       "DATABASES": "Databases",
       "TOOLS": "Tools"
+    },
+    "SPOKEN_LANGUAGES": "Languages",
+    "LANG_LEVELS": {
+      "NATIVE": "Native",
+      "C1": "C1 Advanced"
+    },
+    "LANG_NAMES": {
+      "SPANISH": "Spanish",
+      "ENGLISH": "English"
     }
   },
   "FOOTER": {

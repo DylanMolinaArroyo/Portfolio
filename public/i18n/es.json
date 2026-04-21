@@ -53,19 +53,25 @@
         "TITLE": "Fundamentos de Servicios Web",
         "ISSUER": "IBM",
         "YEAR": "2024",
-        "DESCRIPTION": ["Conceptos clave de servicios web, APIs, REST y arquitecturas SOA."]
+        "DESCRIPTION": [
+          "Conceptos clave de servicios web, APIs, REST y arquitecturas SOA."
+        ]
       },
       {
         "TITLE": "Snowflake Hands On Essentials – Ingeniería de Datos",
         "ISSUER": "Snowflake",
         "YEAR": "2024",
-        "DESCRIPTION": ["Pipelines de datos, Snowpipe, Streams y Tasks en Snowflake."]
+        "DESCRIPTION": [
+          "Pipelines de datos, Snowpipe, Streams y Tasks en Snowflake."
+        ]
       },
       {
         "TITLE": "Comenzar con la Arquitectura Lakehouse en Databricks",
         "ISSUER": "Databricks",
         "YEAR": "2024",
-        "DESCRIPTION": ["Fundamentos de Lakehouse, Delta Lake y análisis unificado en Databricks."]
+        "DESCRIPTION": [
+          "Fundamentos de Lakehouse, Delta Lake y análisis unificado en Databricks."
+        ]
       },
       {
         "TITLE": "Snowflake Hands On Essentials – Aplicaciones de Datos",
@@ -98,7 +104,11 @@
           "Coordinar reuniones entre representantes de empresas y el equipo organizador.",
           "Garantizar una comunicación fluida y una experiencia positiva para patrocinadores y participantes."
         ],
-        "TAGS": ["IEEE", "Organización de Eventos", "Patrocinio"]
+        "TAGS": [
+          "IEEE",
+          "Organización de Eventos",
+          "Patrocinio"
+        ]
       },
       {
         "ROLE": "Asistente de Investigación (Pasante)",
@@ -108,7 +118,11 @@
           "Apoyo a actividades de investigación en el campus de Alajuela del TEC.",
           "Colaboración con personal académico en tareas de recopilación y análisis de datos."
         ],
-        "TAGS": ["Investigación", "TEC", "Pasantía"]
+        "TAGS": [
+          "Investigación",
+          "TEC",
+          "Pasantía"
+        ]
       }
     ]
   },
@@ -166,6 +180,15 @@
       "BACKEND": "Backend",
       "DATABASES": "Bases de Datos",
       "TOOLS": "Herramientas"
+    },
+    "SPOKEN_LANGUAGES": "Idiomas",
+    "LANG_LEVELS": {
+      "NATIVE": "Nativo",
+      "C1": "C1 Avanzado"
+    },
+    "LANG_NAMES": {
+      "SPANISH": "Español",
+      "ENGLISH": "Inglés"
     }
   },
   "FOOTER": {
