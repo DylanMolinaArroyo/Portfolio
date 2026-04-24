@@ -1,0 +1,189 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "EDUCATION": "Education",
+    "CERTIFICATIONS": "Certifications",
+    "PROJECTS": "Projects",
+    "EXPERIENCE": "Experience",
+    "SKILLS": "Skills"
+  },
+  "HOME": {
+    "SUBTITLE": "Software Engineer"
+  },
+  "ABOUT": {
+    "TITLE": "About Me",
+    "TEXT": "I'm a Costa Rican software engineer passionate about web development, cybersecurity, and data. Driven by curiosity and a constant desire to learn, whether it's improving my coding skills or building more secure and resilient systems."
+  },
+  "EDUCATION": {
+    "TITLE": "Education",
+    "SUBTITLE": "Academic background that has shaped my technical foundation.",
+    "NETWORK_TECH": {
+      "FEAT": "Network Technician",
+      "DESCRIPTION": [
+        "Network infrastructure design and configuration",
+        "TCP/IP protocols and network architecture principles",
+        "LAN/WAN technologies and network topology design",
+        "Router and switch configuration (Cisco)",
+        "Network troubleshooting and diagnostic tools (Wireshark, ping, traceroute)",
+        "Network security fundamentals and threat mitigation",
+        "Network documentation and diagram creation"
+      ]
+    },
+    "COMPUTER_ENG": {
+      "FEAT": "Computer Engineering",
+      "DESCRIPTION": [
+        "System architecture design",
+        "Cloud computing solutions",
+        "Backend development with microservices and API design",
+        "Database design, optimization, and data management",
+        "Algorithm development and computational problem-solving",
+        "Cybersecurity principles and secure coding practices",
+        "Technical documentation and system specifications",
+        "Project management and cross-functional team collaboration",
+        "Research and implementation of emerging technologies"
+      ]
+    }
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certifications",
+    "SUBTITLE": "Professional certifications and credentials I have earned.",
+    "ITEMS": [
+      {
+        "TITLE": "Fundamentals of Web Services",
+        "ISSUER": "K-Lab",
+        "YEAR": "2025",
+        "DESCRIPTION": ["Core concepts of web services, APIs, REST, and SOA architectures."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Data Engineering",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Data pipelines, Snowpipe, Streams, and Tasks in Snowflake."]
+      },
+      {
+        "TITLE": "Get Started with Lakehouse Architecture on Databricks",
+        "ISSUER": "Databricks",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Lakehouse fundamentals, Delta Lake, and unified analytics on Databricks."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Data Applications",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Building data applications and integrations using Snowflake's platform."]
+      },
+      {
+        "TITLE": "Snowflake Hands On Essentials – Collaboration & Marketplace",
+        "ISSUER": "Snowflake",
+        "YEAR": "2024",
+        "DESCRIPTION": ["Data sharing, collaboration features, and the Snowflake Data Marketplace."]
+      },
+      {
+        "TITLE": "React 18 for Beginners",
+        "ISSUER": "Code with Mosh",
+        "YEAR": "2026",
+        "DESCRIPTION": [
+          "React 18 fundamentals, components, hooks, state management, and building modern UIs."
+        ]
+      }
+    ]
+  },
+  "EXPERIENCE": {
+    "TITLE": "My Work Experience",
+    "SUBTITLE": "Some of the experiences that have contributed to my development.",
+    "ITEMS": [
+      {
+        "ROLE": "Member of the Organizing Committee – CONESCAPAN 2026",
+        "COMPANY": "IEEE",
+        "YEAR": "Feb 2026 – Present",
+        "DESCRIPTION": [
+          "Establishing direct contact with strategic companies for CONESCAPAN XLIII.",
+          "Coordinating meetings between company representatives and the organizing team.",
+          "Ensuring smooth communication and a positive experience for sponsors and participants."
+        ],
+        "TAGS": ["IEEE", "Event Organization", "Sponsorship"]
+      },
+      {
+        "ROLE": "Research Assistant (Intern)",
+        "COMPANY": "Tecnológico de Costa Rica",
+        "YEAR": "Sep – Dec 2022",
+        "DESCRIPTION": [
+          "Supported ongoing research activities at TEC's Alajuela campus.",
+          "Collaborated with academic staff on data collection and analysis tasks."
+        ],
+        "TAGS": ["Research", "TEC", "Internship"]
+      }
+    ]
+  },
+  "PROJECTS": {
+    "TITLE": "My Projects",
+    "SUBTITLE": "Here are some of the projects that I've worked on.",
+    "GAME_HUB": {
+      "DESCRIPTION": "React application built with TypeScript, Vite, Firebase, and the RAWG API to explore video game data and practice core React concepts."
+    },
+    "TECNO_TANKS": {
+      "DESCRIPTION": "Modern Python/Pygame game inspired by Battle City (1990). Implements process management, thread synchronization, inter-thread communication, and real-time resource control in a client-server architecture."
+    },
+    "DB_VISUALIZER": {
+      "DESCRIPTION": "Web-based application to dynamically connect to different relational database engines and visualize their database schema."
+    },
+    "CHRISTMAS_COMPILER": {
+      "DESCRIPTION": "Java-based academic compiler implementing lexical, syntactic, and semantic analysis using JFLEX and Java CUP, including symbol table management and semantic validation."
+    },
+    "MINI_SNS": {
+      "DESCRIPTION": "Simple social networking service to practice full-stack development. Implements user authentication, post creation, friend management, comments, and likes."
+    }
+  },
+  "SKILLS": {
+    "TITLE": "Skills",
+    "SUBTITLE": "I integrate technical proficiency and interpersonal strengths to build high-impact software.",
+    "COLLABORATION": {
+      "TITLE": "Effective Collaboration",
+      "DESC": "I have worked seamlessly within multidisciplinary teams, fostering a positive environment and ensuring project goals were met through clear, constant communication."
+    },
+    "PROBLEM_SOLVING": {
+      "TITLE": "Adaptive Problem Solving",
+      "DESC": "I successfully tackled complex technical challenges by breaking them down into manageable tasks and finding creative, efficient solutions under pressure."
+    },
+    "LEARNING": {
+      "TITLE": "Continuous Learning",
+      "DESC": "I have demonstrated a strong commitment to professional growth by quickly mastering new technologies and staying updated with the latest industry trends."
+    },
+    "TIME_MANAGEMENT": {
+      "TITLE": "Time Management",
+      "DESC": "I consistently delivered high-quality results within tight deadlines by effectively prioritizing tasks and managing my workflow with precision."
+    },
+    "COMMUNICATION": {
+      "TITLE": "Empathetic Communication",
+      "DESC": "I have translated technical jargon into clear, actionable insights for non-technical stakeholders, ensuring everyone stayed aligned on the project vision."
+    },
+    "CRITICAL_THINKING": {
+      "TITLE": "Critical Thinking",
+      "DESC": "I analyzed project requirements from multiple perspectives to identify potential risks early and implement proactive improvements to the development process."
+    },
+    "TECHNICAL": "Technical Skills",
+    "SOFT": "Soft Skills",
+    "GROUPS": {
+      "LANGUAGES": "Languages",
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend",
+      "DATABASES": "Databases",
+      "TOOLS": "Tools"
+    },
+    "SPOKEN_LANGUAGES": "Languages",
+    "LANG_LEVELS": {
+      "NATIVE": "Native",
+      "C1": "C1 Advanced"
+    },
+    "LANG_NAMES": {
+      "SPANISH": "Spanish",
+      "ENGLISH": "English"
+    }
+  },
+  "FOOTER": {
+    "TAGLINE": "Software Engineer · Costa Rica",
+    "COPYRIGHT": "© {{ year }} Dylan Molina Arroyo. All rights reserved.",
+    "BUILT_WITH": "Built with Angular"
+  }
+}

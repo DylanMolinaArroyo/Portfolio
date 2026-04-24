@@ -1,0 +1,149 @@
+{
+  "configVersion": 1,
+  "timestamp": 1777054237936,
+  "index": "/index.csr.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/index.csr.html",
+        "/index.html",
+        "/main-GAIH3EU6.js",
+        "/manifest.webmanifest",
+        "/styles-WWDAXLAN.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/fonts/Roboto-VariableFont_wdth,wght.ttf",
+        "/assets/icons/languages/en.svg",
+        "/assets/icons/languages/es.svg",
+        "/assets/icons/page/portfolio.svg",
+        "/assets/icons/skills/angular.svg",
+        "/assets/icons/skills/firebase.svg",
+        "/assets/icons/skills/github.svg",
+        "/assets/icons/skills/go.svg",
+        "/assets/icons/skills/java.svg",
+        "/assets/icons/skills/mongodb.svg",
+        "/assets/icons/skills/nodejs.svg",
+        "/assets/icons/skills/postgresql.svg",
+        "/assets/icons/skills/python.svg",
+        "/assets/icons/skills/react.svg",
+        "/assets/icons/skills/supabase.svg",
+        "/assets/icons/skills/typescript.svg",
+        "/assets/icons/ui/badge-check.svg",
+        "/assets/icons/ui/briefcase.svg",
+        "/assets/icons/ui/chevron-left.svg",
+        "/assets/icons/ui/chevron-right.svg",
+        "/assets/icons/ui/code.svg",
+        "/assets/icons/ui/external-link.svg",
+        "/assets/icons/ui/github.svg",
+        "/assets/icons/ui/graduation-cap.svg",
+        "/assets/icons/ui/house.svg",
+        "/assets/icons/ui/linkedin.svg",
+        "/assets/icons/ui/mail.svg",
+        "/assets/icons/ui/map-pin.svg",
+        "/assets/icons/ui/menu.svg",
+        "/assets/icons/ui/palette.svg",
+        "/assets/icons/ui/user.svg",
+        "/assets/icons/ui/x.svg",
+        "/assets/images/avatar.jpg",
+        "/assets/images/avatar.webp",
+        "/assets/images/placeholder.svg",
+        "/icons/icon-128x128.png",
+        "/icons/icon-144x144.png",
+        "/icons/icon-152x152.png",
+        "/icons/icon-192x192.png",
+        "/icons/icon-384x384.png",
+        "/icons/icon-512x512.png",
+        "/icons/icon-72x72.png",
+        "/icons/icon-96x96.png",
+        "/media/Roboto-VariableFont_wdth,wght-TQJTUEE4.ttf"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/fonts/Roboto-VariableFont_wdth,wght.ttf": "6bd9646ab22c0301ce3adbfe8707213a67900404",
+    "/assets/icons/languages/en.svg": "a0d17f03cbc8b3d41c32a167074c54b81111fd11",
+    "/assets/icons/languages/es.svg": "55d12394eb2b1bcc5c6e21c455564fe181c555f6",
+    "/assets/icons/page/portfolio.svg": "67f3b1333949e5629881fa43515793bbc6be0548",
+    "/assets/icons/skills/angular.svg": "9f22bff114909fc49a6907cf1cdfeb359b38ecc9",
+    "/assets/icons/skills/firebase.svg": "32492915811479da21bab8f6a4b2257c46cb2f3f",
+    "/assets/icons/skills/github.svg": "2d442cfd7cf9ab50e203a2d7ee9a8b5ad27d0936",
+    "/assets/icons/skills/go.svg": "d5d26e865f84acea13681596f47dea601ebfe8dc",
+    "/assets/icons/skills/java.svg": "c16d921ecf94c30dc3573821e6812a0000791703",
+    "/assets/icons/skills/mongodb.svg": "2df3ce2891e7ddabe70566cf43983ca19e2f5327",
+    "/assets/icons/skills/nodejs.svg": "d6b88d368afa74da26a67c425d7caa62cb163851",
+    "/assets/icons/skills/postgresql.svg": "6b793f20683302260f5c226fbb397f06053143e7",
+    "/assets/icons/skills/python.svg": "3d710bea92a4cd0e21ec327b9df7ca467ac322c1",
+    "/assets/icons/skills/react.svg": "88bbf36f5b86f8550785dfe026ca0f4867081e3b",
+    "/assets/icons/skills/supabase.svg": "82125dc381af286e18c7b1463e61a0bacd775f48",
+    "/assets/icons/skills/typescript.svg": "db597d48e2f750721753b53494f7a92af4cd08b5",
+    "/assets/icons/ui/badge-check.svg": "f5f5f78c6a63c48e2945c4730412ebd90a1970ab",
+    "/assets/icons/ui/briefcase.svg": "5ae209ac166c7ba57c935784d8b3ad3c6d1b84f8",
+    "/assets/icons/ui/chevron-left.svg": "351f0f4533c1de2e9e6f42bea343cc8b1be383b0",
+    "/assets/icons/ui/chevron-right.svg": "899a2fbb092c303afa51481360f43bf998c934ea",
+    "/assets/icons/ui/code.svg": "96267ad7548d8bfd682fa86920cbb4ba64d9c91d",
+    "/assets/icons/ui/external-link.svg": "eab4d97cdd9667104434a72605e4194c3f56caa2",
+    "/assets/icons/ui/github.svg": "c2283d55ed7e2ad7ab23479dc1fc910b7f9bc7f3",
+    "/assets/icons/ui/graduation-cap.svg": "60a4b1c49714752c95abc95d2c8f826a37a3f1e7",
+    "/assets/icons/ui/house.svg": "b4d2c4d10029928d11c400cae01f28f24bb27d55",
+    "/assets/icons/ui/linkedin.svg": "b087d567d505d9168c0696ad7ab2508f032254a0",
+    "/assets/icons/ui/mail.svg": "f29013263b1a00adefb65de3c3c05a33cb058b9a",
+    "/assets/icons/ui/map-pin.svg": "bc50e373cb107e35b798c605fa220a2798e719f7",
+    "/assets/icons/ui/menu.svg": "95261a78be70c28252aae1f5fedc2338a2926015",
+    "/assets/icons/ui/palette.svg": "a47b0cc247a45696915f2c2b2ab39252feb1a119",
+    "/assets/icons/ui/user.svg": "0f20aa9389b11b64d6be7a30487eb05673a93261",
+    "/assets/icons/ui/x.svg": "025f98a762a5971f9fdd181538be35971f79e264",
+    "/assets/images/avatar.jpg": "8cbda511dfad25143868d786ff41957baedead02",
+    "/assets/images/avatar.webp": "04fa2250b66133f1f9f6cd56f0eff0f28dec9b3b",
+    "/assets/images/placeholder.svg": "2c1bf8cf51ffff450764667cf8042b5f7256c324",
+    "/icons/icon-128x128.png": "e67921b8993729815a438b35a4421fa2fb6d99a9",
+    "/icons/icon-144x144.png": "353f5025af7e89999d5dcdf31310a7ee8884744c",
+    "/icons/icon-152x152.png": "e69bd06944e532880f429b5417812618916c306d",
+    "/icons/icon-192x192.png": "18b2e3e829c5796f1f5cc0556e5b89f25c3c9bcf",
+    "/icons/icon-384x384.png": "e35483da95f0f3981272bb37660b97ad5ef4c761",
+    "/icons/icon-512x512.png": "d6fa1ba32255e7dcdacec981c2d6a118678515ea",
+    "/icons/icon-72x72.png": "6293d1b69ccc637883302e62bffd2a262ce85596",
+    "/icons/icon-96x96.png": "bc492f3b8b743ca1f977faf91d74bc878d9497a6",
+    "/index.csr.html": "412c2ec1a2227a314486a131b457ed157c151b6d",
+    "/index.html": "767588ac5474ecc9071451df256fcb684285b1fe",
+    "/main-GAIH3EU6.js": "79a1d38f1b9f8a3136c149af1c892bd64864e508",
+    "/manifest.webmanifest": "c468a287234386812644986f248b549082854241",
+    "/media/Roboto-VariableFont_wdth,wght-TQJTUEE4.ttf": "6bd9646ab22c0301ce3adbfe8707213a67900404",
+    "/styles-WWDAXLAN.css": "6313e5cfae9fa3dd95f2c1adf28ed07e19238cd8"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
