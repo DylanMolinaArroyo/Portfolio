@@ -64,6 +64,7 @@ export class Navbar implements OnInit, OnDestroy {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.activeSection = entry.target.id;
+            history.replaceState(null, '', `#${entry.target.id}`);
           }
         });
       },
@@ -104,12 +105,12 @@ export class Navbar implements OnInit, OnDestroy {
   }
 
   scrollToSection(sectionId: string): void {
-    if (this.router.url !== '/') {
+    const currentPath = this.router.url.split('#')[0];
+    if (currentPath !== '/') {
       this.router.navigate(['/'], { fragment: sectionId });
     } else {
-      this.router
-        .navigate([], { fragment: sectionId, queryParamsHandling: 'preserve' })
-        .then(() => this.smoothScroll(sectionId));
+      history.replaceState(null, '', `#${sectionId}`);
+      this.smoothScroll(sectionId);
     }
   }
 

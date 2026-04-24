@@ -41,7 +41,10 @@
       </div>
     </div>
     <div class="column" scrollAnimate [animateDelay]="150">
-      <img class="avatar-image" src="./assets/images/avatar.jpg" alt="Avatar" loading="lazy" />
+      <picture>
+        <source srcset="./assets/images/avatar.webp" type="image/webp" />
+        <img class="avatar-image" src="./assets/images/avatar.jpg" alt="Avatar" loading="lazy" />
+      </picture>
     </div>
   </div>
 </section>

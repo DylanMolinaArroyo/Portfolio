@@ -124,7 +124,7 @@ nav.scrolled {
     padding: 0;
     gap: 0;
     background: var(--background-color-dark);
-    transform: translateX(-100%);
+    transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     transition:
@@ -161,11 +161,12 @@ nav.scrolled {
 
   /* Nav items */
   .nav-menu {
+    flex: none;
     flex-direction: column;
     width: 100%;
     gap: 0;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: none;
+    border: none;
   }
 
   .nav-menu li {
@@ -214,6 +215,10 @@ nav.scrolled {
     padding: 1.5rem;
     margin-top: auto;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .btn-lang {
+    margin: 0.75rem 0rem;
   }
 }
 
