@@ -28,9 +28,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css"],
             "server": "src/main.server.ts",
             "outputMode": "static",
             "ssr": {
@@ -64,9 +62,7 @@
         },
         "serve": {
           "options": {
-            "allowedHosts": [
-              "ba1047ae7ee3.ngrok-free.app"
-            ]
+            "allowedHosts": ["ba1047ae7ee3.ngrok-free.app"]
           },
           "builder": "@angular/build:dev-server",
           "configurations": {
@@ -86,6 +82,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "/",
+            "branch": "production",
             "dir": "dist/DylanMA-Portfolio/browser"
           }
         }
