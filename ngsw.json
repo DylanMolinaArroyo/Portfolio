@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1777054237936,
+  "timestamp": 1777152430590,
   "index": "/index.csr.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/index.csr.html",
         "/index.html",
-        "/main-GAIH3EU6.js",
+        "/main-FQCD53PF.js",
         "/manifest.webmanifest",
         "/styles-WWDAXLAN.css"
       ],
@@ -32,6 +32,7 @@
         "/assets/icons/languages/es.svg",
         "/assets/icons/page/portfolio.svg",
         "/assets/icons/skills/angular.svg",
+        "/assets/icons/skills/c_sharp.svg",
         "/assets/icons/skills/firebase.svg",
         "/assets/icons/skills/github.svg",
         "/assets/icons/skills/go.svg",
@@ -43,6 +44,7 @@
         "/assets/icons/skills/react.svg",
         "/assets/icons/skills/supabase.svg",
         "/assets/icons/skills/typescript.svg",
+        "/assets/icons/skills/unity.svg",
         "/assets/icons/ui/badge-check.svg",
         "/assets/icons/ui/briefcase.svg",
         "/assets/icons/ui/chevron-left.svg",
@@ -82,6 +84,7 @@
     "/assets/icons/languages/es.svg": "55d12394eb2b1bcc5c6e21c455564fe181c555f6",
     "/assets/icons/page/portfolio.svg": "67f3b1333949e5629881fa43515793bbc6be0548",
     "/assets/icons/skills/angular.svg": "9f22bff114909fc49a6907cf1cdfeb359b38ecc9",
+    "/assets/icons/skills/c_sharp.svg": "48e4c4cfbd5826a407d744d002d9a802a7c336bc",
     "/assets/icons/skills/firebase.svg": "32492915811479da21bab8f6a4b2257c46cb2f3f",
     "/assets/icons/skills/github.svg": "2d442cfd7cf9ab50e203a2d7ee9a8b5ad27d0936",
     "/assets/icons/skills/go.svg": "d5d26e865f84acea13681596f47dea601ebfe8dc",
@@ -93,6 +96,7 @@
     "/assets/icons/skills/react.svg": "88bbf36f5b86f8550785dfe026ca0f4867081e3b",
     "/assets/icons/skills/supabase.svg": "82125dc381af286e18c7b1463e61a0bacd775f48",
     "/assets/icons/skills/typescript.svg": "db597d48e2f750721753b53494f7a92af4cd08b5",
+    "/assets/icons/skills/unity.svg": "ce03cf379483e500f54998089cda173ff284828f",
     "/assets/icons/ui/badge-check.svg": "f5f5f78c6a63c48e2945c4730412ebd90a1970ab",
     "/assets/icons/ui/briefcase.svg": "5ae209ac166c7ba57c935784d8b3ad3c6d1b84f8",
     "/assets/icons/ui/chevron-left.svg": "351f0f4533c1de2e9e6f42bea343cc8b1be383b0",
@@ -120,9 +124,9 @@
     "/icons/icon-512x512.png": "d6fa1ba32255e7dcdacec981c2d6a118678515ea",
     "/icons/icon-72x72.png": "6293d1b69ccc637883302e62bffd2a262ce85596",
     "/icons/icon-96x96.png": "bc492f3b8b743ca1f977faf91d74bc878d9497a6",
-    "/index.csr.html": "412c2ec1a2227a314486a131b457ed157c151b6d",
-    "/index.html": "767588ac5474ecc9071451df256fcb684285b1fe",
-    "/main-GAIH3EU6.js": "79a1d38f1b9f8a3136c149af1c892bd64864e508",
+    "/index.csr.html": "754ce65adfbee948df21ea275b74449033cfd5d4",
+    "/index.html": "f8d404f5ce304fbb2740c78f9b0511fbad2ccd0f",
+    "/main-FQCD53PF.js": "a6779296b583f4f70dc9849c33bd618427a737ef",
     "/manifest.webmanifest": "c468a287234386812644986f248b549082854241",
     "/media/Roboto-VariableFont_wdth,wght-TQJTUEE4.ttf": "6bd9646ab22c0301ce3adbfe8707213a67900404",
     "/styles-WWDAXLAN.css": "6313e5cfae9fa3dd95f2c1adf28ed07e19238cd8"
