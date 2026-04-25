@@ -43,6 +43,7 @@ export class Skills implements OnInit {
           { icon: 'assets/icons/skills/typescript.svg', name: 'TypeScript' },
           { icon: 'assets/icons/skills/python.svg', name: 'Python' },
           { icon: 'assets/icons/skills/java.svg', name: 'Java' },
+          { icon: 'assets/icons/skills/c_sharp.svg', name: 'C#' },
         ],
       },
       {
@@ -67,7 +68,10 @@ export class Skills implements OnInit {
       },
       {
         labelKey: 'SKILLS.GROUPS.TOOLS',
-        items: [{ icon: 'assets/icons/skills/github.svg', name: 'GitHub' }],
+        items: [
+          { icon: 'assets/icons/skills/github.svg', name: 'GitHub' },
+          { icon: 'assets/icons/skills/unity.svg', name: 'Unity' },
+        ],
       },
     ];
 
